@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/ivanw/.claude/**)",
+      "Read(//c//**)",
+      "Bash(claude mcp *)"
+    ]
+  }
+}
