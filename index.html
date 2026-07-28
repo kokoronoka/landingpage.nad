@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zell-V NAD+ — pharmaceutical-grade NAD+ at 99% purity, manufactured in GMP facilities under FDA-enforced standards. Rejuvenate your cells at the molecular level." />
-  <title>Zell-V NAD+ | Cellular Rejuvenation at the Molecular Level</title>
+  <meta name="description" content="Zell-V NAD+ — pharmaceutical-grade NAD+ at 99% purity, manufactured in GMP facilities under FDA-enforced standards. Restore your energy at the cellular level." />
+  <title>Zell-V NAD+ | Pharmaceutical-Grade Cellular Restoration</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=3" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
 
@@ -18,71 +18,68 @@
   <header class="nav" id="nav">
     <div class="nav__inner">
       <a href="#hero" class="brand" aria-label="Zell-V NAD home">
-        <span class="brand__mark">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M6 4 L12 20 L18 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span>
+        <span class="brand__mark">V</span>
         <span class="brand__text">ZELL&#8209;V <em>NAD&#43;</em></span>
       </a>
 
       <nav class="nav__links" aria-label="Primary">
-        <a href="#science">The Science</a>
         <a href="#benefits">Benefits</a>
-        <a href="#purity">Purity</a>
+        <a href="#quality">Quality</a>
+        <a href="#journey">Journey</a>
         <a href="#faq">FAQ</a>
       </nav>
 
       <div class="nav__actions">
-        <a href="#contact" class="btn btn--gold btn--sm">Book Consultation</a>
+        <a href="#quiz" class="btn btn--gold btn--sm">Take the Quiz</a>
         <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
       </div>
     </div>
 
-    <!-- Mobile overlay -->
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <a href="#science">The Science</a>
       <a href="#benefits">Benefits</a>
-      <a href="#purity">Purity</a>
+      <a href="#quality">Quality</a>
+      <a href="#journey">Journey</a>
       <a href="#faq">FAQ</a>
-      <a href="#contact" class="btn btn--gold">Book Consultation</a>
+      <a href="#quiz" class="btn btn--gold">Take the Quiz</a>
     </div>
   </header>
 
-  <!-- ============ HERO (cursor-spotlight reveal) ============ -->
+  <!-- ============ HERO (cursor-reveal: depleted -> restored) ============ -->
   <section class="hero" id="hero">
-    <!-- Layer 1: base state — dormant / dimmed cell field -->
     <div class="hero__base hero-zoom" aria-hidden="true"></div>
-
-    <!-- Layer 2: reveal state — masked to a soft circle that trails the cursor -->
     <div class="hero__reveal" id="heroReveal" aria-hidden="true"></div>
+    <div class="hero__scrim" aria-hidden="true"></div>
 
-    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="hero__eyebrow hero-anim hero-reveal" style="animation-delay:.1s">
+        <span class="dot"></span>Pharmaceutical&#8209;Grade Precision
+      </p>
 
-    <p class="hero__eyebrow hero-anim hero-reveal" style="animation-delay:.1s">Pharmaceutical&#8209;Grade NAD&#43; Therapy</p>
-
-    <div class="hero__heading">
-      <h1 class="hero__title" aria-label="Rejuvenate your cells at the molecular level">
-        <span class="hero__line hero__line--serif hero-anim hero-reveal" style="animation-delay:.25s">Rejuvenate your cells</span>
-        <span class="hero__line hero-anim hero-reveal" style="animation-delay:.42s">at the molecular level</span>
+      <h1 class="hero__title hero-anim hero-reveal" style="animation-delay:.25s">
+        Restore Your Peak Energy &middot; Renew Life at the <span class="hl">Cellular Level</span>
       </h1>
-    </div>
 
-    <div class="hero__bottom-left hero-anim hero-fade" style="animation-delay:.7s">
-      <p>Every cell carries a reservoir of NAD&#43; that quietly powers energy, repair, and focus &mdash; and it fades with time. Move your cursor to see it restored.</p>
-    </div>
+      <p class="hero__sub hero-anim hero-fade" style="animation-delay:.45s">
+        Experience the gold standard in regenerative therapy. Zell&#8209;V's pharmaceutical&#8209;grade
+        NAD&#43; replenishes the coenzymes your cells depend on &mdash; helping reverse the effects of
+        cellular aging from the inside out.
+      </p>
 
-    <div class="hero__bottom-right hero-anim hero-fade" style="animation-delay:.85s">
-      <p>Zell&#8209;V NAD&#43; replenishes that reservoir directly &mdash; pharmaceutical&#8209;grade, 99% pure, made in GMP facilities under FDA&#8209;enforced standards.</p>
-      <ul class="hero__pills">
-        <li><span class="dot"></span>Pharmaceutical Grade</li>
-        <li><span class="dot"></span>99% Purity</li>
+      <div class="hero__cta hero-anim hero-fade" style="animation-delay:.6s">
+        <a href="#quiz" class="btn btn--gold">60&#8209;Sec Quiz: Check Your Cellular Energy Score</a>
+        <a href="#contact" class="btn btn--ghost">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.4 0-2.7-.32-3.87-.9L3 21l1.9-5.63A8.46 8.46 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          Chat With Us
+        </a>
+      </div>
+
+      <ul class="hero__pills hero-anim hero-fade" style="animation-delay:.75s">
+        <li><span class="dot"></span>Swiss ISO Certified</li>
+        <li><span class="dot"></span>99% Purity Protocol</li>
         <li><span class="dot"></span>GMP &middot; FDA</li>
       </ul>
-      <a href="#contact" class="btn btn--gold">
-        Begin Your Therapy
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 17 L17 7 M9 7 h8 v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
     </div>
 
     <div class="hero__scroll" aria-hidden="true">
@@ -91,75 +88,66 @@
     </div>
   </section>
 
-  <!-- ============ TRUST / 3 PILLARS ============ -->
-  <section class="pillars" id="purity">
+  <!-- ============ PURITY / PRODUCT ============ -->
+  <section class="purity" id="purity">
     <div class="container">
-      <p class="section__eyebrow reveal">Uncompromising Standards</p>
-      <h2 class="section__title reveal">Three promises in every dose</h2>
+      <ul class="badges reveal">
+        <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Pharmaceutical Grade</li>
+        <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10 2h4v6l4 9a3 3 0 0 1-2.7 4H8.7A3 3 0 0 1 6 17l4-9V2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>99% Purity Protocol</li>
+        <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>GMP &amp; FDA Compliant</li>
+      </ul>
 
-      <div class="pillars__grid">
-        <article class="pillar reveal" data-tilt>
-          <div class="pillar__icon">
-            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M10 2h4v6l4 9a3 3 0 0 1-2.7 4H8.7A3 3 0 0 1 6 17l4-9V2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.5 14h9" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-          </div>
-          <h3>Pharmaceutical&#8209;Grade NAD&#43;</h3>
-          <p>Not a consumer supplement. Clinical&#8209;tier NAD&#43; formulated for genuine cellular bioavailability.</p>
-        </article>
+      <div class="product reveal">
+        <div class="product__vials">
+          <div class="vial"><span class="vial__cap"></span><span class="vial__label">ZELL&#8209;V<br>NAD&#43;</span></div>
+          <div class="vial vial--tall"><span class="vial__cap"></span><span class="vial__label">ZELL&#8209;V<br>NAD&#43;</span></div>
+          <div class="vial"><span class="vial__cap"></span><span class="vial__label">ZELL&#8209;V<br>NAD&#43;</span></div>
+          <div class="vial vial--sm"><span class="vial__cap"></span><span class="vial__label">ZELL&#8209;V<br>NAD&#43;</span></div>
+        </div>
+        <span class="tag tag--dark">99% PURITY CERTIFIED</span>
+        <span class="tag tag--blue">COLD&#8209;CHAIN PRESERVED</span>
+      </div>
 
-        <article class="pillar reveal" data-tilt>
-          <div class="pillar__icon">
-            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3><span class="counter" data-target="99">0</span>% Purity</h3>
-          <p>Independently verified at 99% purity &mdash; free from the fillers and byproducts of lesser sources.</p>
-        </article>
-
-        <article class="pillar reveal" data-tilt>
-          <div class="pillar__icon">
-            <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>GMP &amp; FDA Standards</h3>
-          <p>Manufactured in GMP&#8209;certified facilities under the stringent regulations enforced by the FDA.</p>
-        </article>
+      <div class="product__quote reveal">
+        <p class="eyebrow-link">Unmatched Potency</p>
+        <p>&ldquo;Formulated to exceed pharmaceutical purity benchmarks, engineering cellular uptake that is
+        measurably superior to standard NAD&#43; formulations.&rdquo; &mdash; Independent Purity Analysis, 2024</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ SCIENCE / WHAT IS NAD ============ -->
-  <section class="science" id="science">
-    <div class="container science__grid">
-      <div class="science__visual reveal">
-        <div class="molecule">
-          <div class="molecule__ring molecule__ring--1"></div>
-          <div class="molecule__ring molecule__ring--2"></div>
-          <div class="molecule__ring molecule__ring--3"></div>
-          <div class="molecule__core">
-            <span>NAD<sup>&#43;</sup></span>
-          </div>
-          <div class="molecule__node n1"></div>
-          <div class="molecule__node n2"></div>
-          <div class="molecule__node n3"></div>
-          <div class="molecule__node n4"></div>
-        </div>
+  <!-- ============ PROBLEM / AGITATION ============ -->
+  <section class="problem">
+    <div class="container">
+      <h2 class="problem__title reveal">Constantly Exhausted? Your Cells Might Be <span class="hl">Running on Empty.</span></h2>
+
+      <div class="problem__grid">
+        <article class="pcard reveal">
+          <div class="pcard__img pcard__img--coffee"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 4c0 1-1 1-1 2M12 4c0 1-1 1-1 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+          <h3>Coffee Addiction</h3>
+          <p>Relying on caffeine just to function? You're borrowing energy your cells can't actually afford to repay.</p>
+        </article>
+
+        <article class="pcard reveal">
+          <div class="pcard__img pcard__img--fog"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Brain Fog</h3>
+          <p>Trouble focusing and mid&#8209;day crashes are early signs of mitochondrial strain and declining NAD&#43;.</p>
+        </article>
+
+        <article class="pcard reveal">
+          <div class="pcard__img pcard__img--age"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <h3>Accelerated Aging</h3>
+          <p>Lower NAD&#43; levels slow DNA repair &mdash; a driver of visible skin aging and sluggish metabolic recovery.</p>
+        </article>
       </div>
 
-      <div class="science__text">
-        <p class="section__eyebrow reveal">The Molecule of Vitality</p>
-        <h2 class="section__title reveal">What is NAD&#43;, and why does it matter?</h2>
-        <p class="lede reveal">
-          Nicotinamide adenine dinucleotide &mdash; NAD&#43; &mdash; is a coenzyme found in every
-          living cell. It powers the mitochondria, fuels DNA repair, and regulates the pathways
-          that keep you feeling energized and sharp.
-        </p>
-        <p class="reveal">
-          But NAD&#43; declines steadily with age. As levels fall, cells lose efficiency &mdash;
-          you feel it as fatigue, foggy focus, and slower recovery. Zell&#8209;V NAD&#43; replenishes
-          this vital reserve directly, at the molecular level where it counts.
-        </p>
-        <div class="science__stats reveal">
-          <div><strong><span class="counter" data-target="50">0</span>%</strong><span>NAD&#43; can decline by midlife</span></div>
-          <div><strong><span class="counter" data-target="100">0</span>%</strong><span>of cells depend on it</span></div>
+      <div class="stat-banner reveal">
+        <div class="stat-banner__num"><span class="counter" data-target="50">0</span>%</div>
+        <div class="stat-banner__text">
+          <strong>Did You Know?</strong>
+          <span>By age 50, your natural NAD&#43; levels can plunge by half &mdash; driving systemic decline.</span>
         </div>
+        <a href="#quiz" class="btn btn--gold btn--sm">Restore My Levels</a>
       </div>
     </div>
   </section>
@@ -167,74 +155,159 @@
   <!-- ============ BENEFITS ============ -->
   <section class="benefits" id="benefits">
     <div class="container">
-      <p class="section__eyebrow reveal">The Experience</p>
-      <h2 class="section__title reveal">The life&#8209;changing benefits of cellular rejuvenation</h2>
+      <p class="section__eyebrow reveal">Biological Restoration</p>
+      <h2 class="section__title reveal">The Zell&#8209;V Standard of Vitality</h2>
 
       <div class="benefits__grid">
-        <article class="benefit reveal">
-          <div class="benefit__icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <article class="bcard reveal">
+          <div class="bcard__img bcard__img--brain" aria-hidden="true"></div>
+          <div class="bcard__body">
+            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <h3>Banish Brain Fog</h3>
+            <p>Enhance cognitive function, sharpen focus, and help protect against age&#8209;related neurodegeneration.</p>
           </div>
-          <h3>Energy &amp; Vitality</h3>
-          <p>Recharge cellular energy production so you feel genuinely restored &mdash; not just caffeinated.</p>
         </article>
 
-        <article class="benefit reveal">
-          <div class="benefit__icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <article class="bcard reveal">
+          <div class="bcard__img bcard__img--dna" aria-hidden="true"></div>
+          <div class="bcard__body">
+            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <h3>Cellular Anti&#8209;Aging</h3>
+            <p>Activate longevity pathways and support DNA repair to rejuvenate your body from the inside out.</p>
           </div>
-          <h3>Mental Clarity</h3>
-          <p>Sharpen focus and memory as neurons regain the fuel they need to fire cleanly.</p>
         </article>
 
-        <article class="benefit reveal">
-          <div class="benefit__icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <article class="bcard reveal">
+          <div class="bcard__img bcard__img--iv" aria-hidden="true"></div>
+          <div class="bcard__body">
+            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+            <h3>Peak Vitality</h3>
+            <p>Boost ATP production in the mitochondria for sustained physical stamina and rapid recovery.</p>
           </div>
-          <h3>Cellular Anti&#8209;Aging</h3>
-          <p>Support DNA repair and the regenerative pathways that keep cells youthful and resilient.</p>
-        </article>
-
-        <article class="benefit reveal">
-          <div class="benefit__icon">
-            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M12 21s-7-4.3-9.3-9A5.2 5.2 0 0 1 12 6a5.2 5.2 0 0 1 9.3 6c-2.3 4.7-9.3 9-9.3 9z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          </div>
-          <h3>Faster Recovery</h3>
-          <p>Accelerate healing from exercise or strain, with reduced downtime and deeper repair.</p>
         </article>
       </div>
     </div>
   </section>
 
-  <!-- ============ ROTATING FEATURE STRIP ============ -->
-  <section class="feature-strip">
-    <div class="container feature-strip__inner">
-      <div class="feature-strip__label reveal">
-        <p class="section__eyebrow">Why Zell&#8209;V</p>
-        <h2 class="section__title">Purity you can feel,<br>standards you can trust.</h2>
+  <!-- ============ QUALITY / LAB (dark) ============ -->
+  <section class="quality" id="quality">
+    <div class="container quality__grid">
+      <div class="quality__text reveal">
+        <p class="section__eyebrow section__eyebrow--light">Uncompromising Quality</p>
+        <h2 class="section__title section__title--light">Not All NAD&#43; Is Created Equal</h2>
+        <p class="quality__lede">
+          Zell&#8209;V provides pharmaceutical&#8209;grade NAD&#43; formulated for clinical use &mdash;
+          engineered for maximum bioavailability and safety at every dose.
+        </p>
+
+        <ul class="quality__list">
+          <li>
+            <span class="qicon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M10 2h4v6l4 9a3 3 0 0 1-2.7 4H8.7A3 3 0 0 1 6 17l4-9V2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <div><strong>99% Purity Protocol</strong><p>Triple&#8209;filtered through a proprietary cold&#8209;chain process to prevent oxidation.</p></div>
+          </li>
+          <li>
+            <span class="qicon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div><strong>GMP &amp; FDA Compliance</strong><p>Every batch is independently tested for sterility and precise concentration.</p></div>
+          </li>
+          <li>
+            <span class="qicon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 12l2 2 4-4M12 3l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V6l8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+            <div><strong>Doctor&#8209;Led Administration</strong><p>Your therapy is tailored and monitored by board&#8209;certified specialists.</p></div>
+          </li>
+        </ul>
       </div>
 
-      <div class="feature-strip__cards" id="rotator">
-        <div class="fcard is-active">
-          <div class="fcard__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M10 2h4v6l4 9a3 3 0 0 1-2.7 4H8.7A3 3 0 0 1 6 17l4-9V2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-          <p>Clinical&#8209;tier NAD&#43; formulated for real cellular bioavailability.</p>
+      <div class="quality__visual reveal">
+        <div class="lab-panel">
+          <div class="lab-panel__grid" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+          </div>
+          <div class="lab-panel__molecule" aria-hidden="true"></div>
         </div>
-        <div class="fcard">
-          <div class="fcard__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p>Independently verified at 99% purity &mdash; nothing hidden, nothing diluted.</p>
-        </div>
-        <div class="fcard">
-          <div class="fcard__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 2l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V5l8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-          <p>Manufactured in GMP facilities under FDA&#8209;enforced regulation.</p>
-        </div>
-        <div class="fcard">
-          <div class="fcard__icon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3zM9 18h6M10 21h4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p>Backed by science, delivered with clinical care and consultation.</p>
+        <span class="badge-circle">Pharmaceutical&#8209;Grade<br>Technology</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TREATMENT JOURNEY ============ -->
+  <section class="journey" id="journey">
+    <div class="container">
+      <p class="section__eyebrow reveal">Treatment Journey</p>
+      <h2 class="section__title reveal">Your Path to Restoration</h2>
+      <p class="journey__sub reveal">A seamless, concierge experience designed for the high&#8209;performance individual.</p>
+
+      <div class="journey__grid">
+        <article class="jcard reveal">
+          <span class="jcard__num">01</span>
+          <h3>Personalized Consultation</h3>
+          <p>A detailed wellness audit and biomarker review to customize your NAD&#43; dosage and frequency.</p>
+        </article>
+        <article class="jcard jcard--active reveal">
+          <span class="jcard__num">02</span>
+          <h3>Guided IV Therapy</h3>
+          <p>Recline in a private treatment pod while your cells receive a direct, monitored nutrient infusion.</p>
+        </article>
+        <article class="jcard reveal">
+          <span class="jcard__num">03</span>
+          <h3>Walk Out Restored</h3>
+          <p>Immediate mental clarity and a surge in baseline energy that continues building over 48 hours.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <h2 class="section__title testimonials__title reveal">Real Results, Real Restoration</h2>
+
+      <div class="testimonials__grid">
+        <div class="video-card reveal">
+          <div class="video-card__thumb">
+            <button class="video-card__play" aria-label="Play testimonial video">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5l12 7-12 7V5z" fill="currentColor"/></svg>
+            </button>
+            <span class="video-card__label">CLIENT TESTIMONIAL</span>
+          </div>
+          <p>How Zell&#8209;V Restored My Edge &mdash; A Founder's Journey</p>
         </div>
 
-        <div class="fcard__dots" id="dots">
-          <span class="is-active"></span><span></span><span></span><span></span>
+        <div class="quotes">
+          <article class="quote-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>&ldquo;The mental clarity was almost immediate. I went from feeling perpetually drained to having
+            the focus of my twenties again &mdash; a total game&#8209;changer for my work.&rdquo;</p>
+            <div class="quote-card__author">
+              <span class="avatar">SJ</span>
+              <div><strong>Sarah J.</strong><span>Venture Partner</span></div>
+            </div>
+          </article>
+          <article class="quote-card reveal">
+            <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p>&ldquo;After years of international travel, this is the only protocol that actually eliminates my
+            jet lag and brain fog. The whole experience feels genuinely premium.&rdquo;</p>
+            <div class="quote-card__author">
+              <span class="avatar avatar--gold">ML</span>
+              <div><strong>Marc L.</strong><span>Tech Executive</span></div>
+            </div>
+          </article>
         </div>
+      </div>
+      <p class="disclaimer-note reveal">Sample testimonials shown for illustration &mdash; replace with your verified client reviews.</p>
+    </div>
+  </section>
+
+  <!-- ============ INTERACTIVE QUIZ ============ -->
+  <section class="quiz-section" id="quiz">
+    <div class="container">
+      <div class="quiz reveal">
+        <div class="quiz__header">
+          <div>
+            <h3>Cellular Health Assessment</h3>
+            <span id="quizStepLabel">Step 1 of 4</span>
+          </div>
+          <div class="quiz__progress"><div class="quiz__progress-bar" id="quizProgressBar"></div></div>
+        </div>
+        <div class="quiz__body" id="quizBody"></div>
       </div>
     </div>
   </section>
@@ -242,96 +315,62 @@
   <!-- ============ FAQ ============ -->
   <section class="faq" id="faq">
     <div class="container">
-      <p class="section__eyebrow reveal">Have Questions?</p>
-      <h2 class="section__title reveal">We're here to help</h2>
+      <p class="section__eyebrow section__eyebrow--center reveal">Common Questions</p>
 
       <div class="faq__list reveal">
         <details class="faq__item">
-          <summary>What exactly is Zell&#8209;V NAD&#43;?
+          <summary>How soon will I feel the effects after a session?
             <span class="faq__plus" aria-hidden="true"></span>
           </summary>
-          <p>Zell&#8209;V NAD&#43; is a pharmaceutical&#8209;grade NAD&#43; therapy at 99% purity, manufactured in GMP&#8209;certified facilities under the stringent regulations enforced by the FDA. It replenishes the NAD&#43; coenzyme your cells rely on for energy and repair.</p>
+          <p>Many clients notice improved mental clarity within hours, with energy benefits building over the following 24&ndash;48 hours as NAD&#43; is absorbed at the cellular level.</p>
         </details>
         <details class="faq__item">
-          <summary>How is it different from over&#8209;the&#8209;counter supplements?
+          <summary>How long does one session take? Is there any downtime?
             <span class="faq__plus" aria-hidden="true"></span>
           </summary>
-          <p>Consumer supplements are often low purity and poorly absorbed. Ours is clinical&#8209;tier &mdash; independently verified at 99% purity and made to pharmaceutical manufacturing standards for genuine bioavailability.</p>
+          <p>A typical infusion takes 45&ndash;90 minutes in a private treatment pod. There is no downtime &mdash; you can resume normal activity immediately after.</p>
         </details>
         <details class="faq__item">
-          <summary>What benefits can I expect?
+          <summary>I'm not sick, just always tired and foggy. Is NAD&#43; therapy right for me?
             <span class="faq__plus" aria-hidden="true"></span>
           </summary>
-          <p>People pursue NAD&#43; therapy for renewed energy, sharper mental focus, support for DNA repair and cellular anti&#8209;aging, and faster recovery from exercise or strain.</p>
+          <p>Absolutely. Most clients aren't unwell &mdash; they're simply running on depleted cellular reserves. NAD&#43; therapy is designed to restore that baseline, not treat illness.</p>
         </details>
         <details class="faq__item">
-          <summary>How do I get started?
+          <summary>How often do I need therapy to maintain peak results?
             <span class="faq__plus" aria-hidden="true"></span>
           </summary>
-          <p>Book a personalized consultation below. Our team responds within 24 hours to design a protocol suited to your goals.</p>
+          <p>Most clients start with weekly sessions for the first month, then shift to a monthly maintenance schedule based on their personalized consultation.</p>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- ============ CTA / CONTACT ============ -->
-  <section class="cta" id="contact">
-    <div class="cta__glow" aria-hidden="true"></div>
-    <div class="container cta__inner reveal">
-      <p class="section__eyebrow section__eyebrow--light">Your Rejuvenation Begins Here</p>
-      <h2 class="cta__title">Rediscover your youthful vitality.</h2>
-      <p class="cta__sub">Book a personalized consultation. Our specialists respond within 24 hours.</p>
-
-      <form class="cta__form" id="ctaForm" novalidate>
-        <div class="field">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" autocomplete="name" required placeholder="Jane Doe" />
-        </div>
-        <div class="field">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" autocomplete="email" required placeholder="jane@email.com" />
-        </div>
-        <button type="submit" class="btn btn--gold btn--block">
-          Request Consultation
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M7 17 L17 7 M9 7 h8 v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <p class="cta__note" id="formNote" role="status" aria-live="polite"></p>
-      </form>
+  <!-- ============ FINAL CTA + FOOTER (dark) ============ -->
+  <section class="cta-final" id="contact">
+    <div class="container cta-final__inner reveal">
+      <h2>Don't Let Cellular Fatigue Hold Back Your High&#8209;Performance Life.</h2>
+      <p>Reclaim your biological edge with pharmaceutical&#8209;grade NAD&#43; therapy.</p>
+      <a href="#quiz" class="btn btn--gold">Get Your Personalized Plan</a>
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="container footer__inner">
-      <div class="footer__brand">
-        <span class="brand__text">ZELL&#8209;V <em>NAD&#43;</em></span>
-        <p>Cellular rejuvenation at the molecular level.</p>
-      </div>
-      <div class="footer__cols">
-        <div>
-          <h4>Explore</h4>
-          <a href="#science">The Science</a>
-          <a href="#benefits">Benefits</a>
-          <a href="#purity">Purity</a>
-        </div>
-        <div>
-          <h4>Standards</h4>
-          <span>Pharmaceutical Grade</span>
-          <span>99% Purity</span>
-          <span>GMP &middot; FDA</span>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <a href="#contact">Book Consultation</a>
-        </div>
-      </div>
+      <span class="brand__text footer__brand">ZELL&#8209;V <em>NAD&#43;</em></span>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Medical Disclaimer</a>
+        <a href="#">Contact Us</a>
+      </nav>
     </div>
-    <div class="footer__base container">
-      <span>&copy; <span id="year"></span> Zell&#8209;V NAD&#43;. All rights reserved.</span>
+    <div class="container footer__base">
+      <span>&copy; <span id="year"></span> Zell&#8209;V Regenerative Medicine. All rights reserved.</span>
       <span class="footer__disclaimer">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</span>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
