@@ -1,5 +1,5 @@
 /* ============================================================
-   ZELL-V NAD+  |  Navy · White · Gold · Clinical Blue
+   ZELL-V NAD+  |  Navy · White · Gold · Clinical Blue · Forest Green
    ============================================================ */
 
 :root {
@@ -17,9 +17,13 @@
   --gold-dark:  #9C7627;
   --gold-grad:  linear-gradient(135deg, #E4C77A 0%, #C99A3B 50%, #9C7627 100%);
 
+  --green:      #1F5138;
+  --green-soft: #E3EFE7;
+  --green-dark: #12331F;
+
   --white:     #FFFFFF;
   --cream:     #FAFAF9;
-  --gray-bg:   #F3F5F8;
+  --gray-bg:   #F1F5F1;
   --ink:       #101828;
   --ink-soft:  #5B6472;
   --line:      rgba(16,24,40,.1);
@@ -199,6 +203,7 @@ ul { list-style: none; }
 .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 34px; margin-bottom: 50px; }
 .badges li { display: flex; align-items: center; gap: 9px; font-size: 14px; font-weight: 600; color: var(--navy); }
 .badges li svg { color: var(--blue); }
+.badges li:nth-child(1) svg { color: var(--green); }
 
 .product { position: relative; max-width: 900px; margin: 0 auto 40px; }
 .product__vials {
@@ -247,7 +252,7 @@ ul { list-style: none; }
   transition: transform .4s var(--ease), box-shadow .4s var(--ease);
 }
 .pcard:nth-child(2) { border-left-color: var(--gold); }
-.pcard:nth-child(3) { border-left-color: var(--navy-mid); }
+.pcard:nth-child(3) { border-left-color: var(--green); }
 .pcard:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -22px rgba(16,24,40,.25); }
 .pcard__img {
   width: 100%; height: 120px; border-radius: 10px; margin-bottom: 18px;
@@ -255,7 +260,7 @@ ul { list-style: none; }
 }
 .pcard__img--coffee { background: linear-gradient(140deg, #3a2c1c, #6b4a29); }
 .pcard__img--fog { background: linear-gradient(140deg, #1d3a5f, #4a90d9); }
-.pcard__img--age { background: linear-gradient(140deg, #2b2440, #6d5a9c); }
+.pcard__img--age { background: linear-gradient(140deg, var(--green-dark), var(--green)); }
 .pcard h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
 .pcard p { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
 
@@ -282,20 +287,21 @@ ul { list-style: none; }
 .bcard:hover { transform: translateY(-6px); box-shadow: 0 20px 40px -22px rgba(16,24,40,.2); }
 .bcard__img { height: 150px; }
 .bcard__img--brain { background: radial-gradient(circle at 60% 40%, rgba(47,111,237,.35), transparent 60%), linear-gradient(140deg, #eef4ff, #dbe8ff); }
-.bcard__img--dna { background: linear-gradient(150deg, #0d1a30, #1d3a5f); }
+.bcard__img--dna { background: radial-gradient(circle at 60% 40%, rgba(31,81,56,.4), transparent 60%), linear-gradient(150deg, var(--green-dark), var(--green)); }
 .bcard__img--iv { background: linear-gradient(150deg, #f4ede0, #e6d3ae); }
 .bcard__body { padding: 24px; }
 .bcard__icon {
   display: grid; place-items: center; width: 42px; height: 42px; border-radius: 12px;
   background: var(--blue-soft); color: var(--blue); margin-bottom: 14px;
 }
+.bcard:nth-child(2) .bcard__icon { background: var(--green-soft); color: var(--green); }
 .bcard h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; }
 .bcard p { font-size: 14px; color: var(--ink-soft); line-height: 1.6; }
 
 /* ============================================================
    QUALITY (dark)
    ============================================================ */
-.quality { padding: 100px 0; background: var(--navy-deep); }
+.quality { padding: 100px 0; background: linear-gradient(160deg, var(--green-dark) 0%, var(--green) 100%); }
 .quality__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .quality__lede { color: rgba(255,255,255,.7); font-size: 15.5px; line-height: 1.7; margin-bottom: 30px; max-width: 440px; }
 .quality__list { display: flex; flex-direction: column; gap: 22px; }
@@ -310,7 +316,7 @@ ul { list-style: none; }
 .quality__visual { position: relative; }
 .lab-panel {
   position: relative; aspect-ratio: 4/3; border-radius: 20px; overflow: hidden;
-  background: linear-gradient(150deg, #14243c, #0b1626);
+  background: linear-gradient(150deg, var(--green) 0%, var(--green-dark) 100%);
   border: 1px solid rgba(255,255,255,.1);
 }
 .lab-panel__grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(2, 1fr); gap: 1px; padding: 20px; opacity: .5; }
@@ -325,7 +331,7 @@ ul { list-style: none; }
   position: absolute; bottom: -20px; right: -10px; width: 110px; height: 110px; border-radius: 50%;
   background: var(--blue); color: var(--white); font-size: 11px; font-weight: 700; text-align: center;
   line-height: 1.35; display: flex; align-items: center; justify-content: center; padding: 10px;
-  box-shadow: 0 16px 34px -12px rgba(47,111,237,.6); border: 3px solid var(--navy-deep);
+  box-shadow: 0 16px 34px -12px rgba(47,111,237,.6); border: 3px solid var(--green-dark);
 }
 
 /* ============================================================
@@ -380,6 +386,7 @@ ul { list-style: none; }
   background: var(--white); border-left: 3px solid var(--blue); border-radius: 14px; padding: 24px;
   box-shadow: 0 14px 34px -24px rgba(16,24,40,.3);
 }
+.quote-card:nth-child(2) { border-left-color: var(--green); }
 .stars { color: var(--gold); font-size: 14px; letter-spacing: 2px; margin-bottom: 10px; }
 .quote-card p { font-size: 14.5px; color: var(--ink); line-height: 1.65; margin-bottom: 16px; }
 .quote-card__author { display: flex; align-items: center; gap: 12px; }
@@ -473,7 +480,7 @@ ul { list-style: none; }
 .cta-final h2 { color: var(--white); font-size: clamp(1.7rem, 3.6vw, 2.4rem); font-weight: 700; margin-bottom: 16px; letter-spacing: -0.02em; }
 .cta-final p { color: rgba(255,255,255,.7); font-size: 15.5px; margin-bottom: 32px; }
 
-.footer { background: var(--navy-deep); border-top: 1px solid var(--navy-line); padding: 34px 0 26px; }
+.footer { background: var(--green-dark); border-top: 1px solid var(--navy-line); padding: 34px 0 26px; }
 .footer__inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; padding-bottom: 26px; border-bottom: 1px solid var(--navy-line); }
 .footer__brand { color: var(--white); font-size: 19px; }
 .footer__brand em { color: var(--gold-light); font-style: normal; }
