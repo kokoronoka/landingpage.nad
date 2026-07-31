@@ -1,18 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Zell-V NAD+ — pharmaceutical-grade NAD+ at 99% purity, manufactured in GMP facilities under FDA-enforced standards. Restore your energy at the cellular level." />
+  <meta name="description"
+    content="Zell-V NAD+ — pharmaceutical-grade NAD+ at 99% purity, manufactured in GMP facilities under FDA-enforced standards. Restore your energy at the cellular level." />
   <title>Zell-V NAD+ | Pharmaceutical-Grade Cellular Restoration</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=7" />
+  <link rel="stylesheet" href="styles.css?v=11" />
 </head>
+
 <body>
+
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <div class="announce-bar">
+    <a href="#quiz">Take the 60&#8209;second Cellular Health Assessment <span aria-hidden="true">&rarr;</span></a>
+  </div>
 
   <!-- ============ NAVBAR ============ -->
   <header class="nav" id="nav">
@@ -26,6 +35,7 @@
         <a href="#benefits">Benefits</a>
         <a href="#quality">Quality</a>
         <a href="#journey">Journey</a>
+        <a href="#protocols">Protocols</a>
         <a href="#faq">FAQ</a>
       </nav>
 
@@ -41,16 +51,16 @@
       <a href="#benefits">Benefits</a>
       <a href="#quality">Quality</a>
       <a href="#journey">Journey</a>
+      <a href="#protocols">Protocols</a>
       <a href="#faq">FAQ</a>
       <a href="#quiz" class="btn btn--gold">Take the Quiz</a>
     </div>
   </header>
 
-  <!-- ============ HERO (cursor-reveal: depleted -> restored) ============ -->
+  <!-- ============ HERO (light, airy, Seed-inspired) ============ -->
   <section class="hero" id="hero">
-    <div class="hero__base hero-zoom" aria-hidden="true"></div>
-    <div class="hero__reveal" id="heroReveal" aria-hidden="true"></div>
-    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="hero__blob" id="heroBlob" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
 
     <div class="hero__content">
       <p class="hero__eyebrow hero-anim hero-reveal" style="animation-delay:.1s">
@@ -62,24 +72,26 @@
       </h1>
 
       <p class="hero__sub hero-anim hero-fade" style="animation-delay:.45s">
-        Experience the gold standard in regenerative therapy. Zell&#8209;V's pharmaceutical&#8209;grade
-        NAD&#43; replenishes the coenzymes your cells depend on &mdash; helping reverse the effects of
-        cellular aging from the inside out.
+        Discover Physician-Guided NAD+ Therapy Designed To Restore Energy, Mental Clarity & Healthy Ageing.
       </p>
 
       <div class="hero__cta hero-anim hero-fade" style="animation-delay:.6s">
         <a href="#quiz" class="btn btn--gold">60&#8209;Sec Quiz: Check Your Cellular Energy Score</a>
         <a href="#contact" class="btn btn--ghost">
-          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.4 0-2.7-.32-3.87-.9L3 21l1.9-5.63A8.46 8.46 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-          Chat With Us
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path
+              d="M21 11.5a8.5 8.5 0 0 1-8.5 8.5c-1.4 0-2.7-.32-3.87-.9L3 21l1.9-5.63A8.46 8.46 0 0 1 3.5 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"
+              fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+          </svg>
+          Speak To Health Consultant
         </a>
       </div>
 
-      <ul class="hero__pills hero-anim hero-fade" style="animation-delay:.75s">
+      <!-- <ul class="hero__pills hero-anim hero-fade" style="animation-delay:.75s">
         <li><span class="dot"></span>Pharmaceutical Grade</li>
         <li><span class="dot"></span>99% Purity Protocol</li>
         <li><span class="dot"></span>GMP &middot; FDA</li>
-      </ul>
+      </ul> -->
     </div>
 
     <div class="hero__scroll" aria-hidden="true">
@@ -92,26 +104,80 @@
   <section class="purity" id="purity">
     <div class="container">
       <ul class="badges reveal">
-        <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>Pharmaceutical Grade</li>
-        <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M10 2h4v6l4 9a3 3 0 0 1-2.7 4H8.7A3 3 0 0 1 6 17l4-9V2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>99% Purity Protocol</li>
-        <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>GMP &amp; FDA Compliant</li>
+        <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" fill="none" stroke="currentColor"
+              stroke-width="1.6" stroke-linejoin="round" />
+          </svg>30 Years of Medical Expertise</li>
+        <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <path d="M10 2h4v6l4 9a3 3 0 0 1-2.7 4H8.7A3 3 0 0 1 6 17l4-9V2z" fill="none" stroke="currentColor"
+              stroke-width="1.6" stroke-linejoin="round" />
+          </svg> Physician-Led Wellness Care</li>
+        <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+            <path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>Personalised Treatment Plan
+        </li>
       </ul>
 
       <div class="product reveal">
-        <div class="product__vials">
-          <div class="vial"><span class="vial__cap"></span><span class="vial__label">ZELL&#8209;V<br>NAD&#43;</span></div>
-          <div class="vial vial--tall"><span class="vial__cap"></span><span class="vial__label">ZELL&#8209;V<br>NAD&#43;</span></div>
-          <div class="vial"><span class="vial__cap"></span><span class="vial__label">ZELL&#8209;V<br>NAD&#43;</span></div>
-          <div class="vial vial--sm"><span class="vial__cap"></span><span class="vial__label">ZELL&#8209;V<br>NAD&#43;</span></div>
+        <div class="product__flow" aria-label="Cell to Mitochondria to Energy process">
+          <div class="flow-stage flow-stage--cell">
+            <div class="flow-icon">
+              <svg viewBox="0 0 48 48" width="42" height="42" aria-hidden="true">
+                <circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="1.8" />
+                <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="1.8" />
+                <circle cx="14" cy="16" r="1.6" fill="currentColor" />
+                <circle cx="34" cy="15" r="1.6" fill="currentColor" />
+                <circle cx="36" cy="32" r="1.6" fill="currentColor" />
+                <circle cx="12" cy="33" r="1.6" fill="currentColor" />
+              </svg>
+            </div>
+            <span class="flow-label">Cell</span>
+          </div>
+
+          <div class="flow-connector"><span class="flow-dot"></span></div>
+
+          <div class="flow-stage flow-stage--mito">
+            <div class="flow-icon">
+              <svg viewBox="0 0 48 48" width="46" height="30" aria-hidden="true">
+                <rect x="2" y="6" width="44" height="24" rx="12" fill="none" stroke="currentColor" stroke-width="1.8" />
+                <path d="M10 12c4 0 4 6 8 6s4-6 8-6 4 6 8 6 4-6 8-6" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" />
+                <path d="M10 24c4 0 4-6 8-6s4 6 8 6 4-6 8-6 4 6 8 6" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" />
+              </svg>
+            </div>
+            <span class="flow-label">Mitochondria</span>
+          </div>
+
+          <div class="flow-connector"><span class="flow-dot"></span></div>
+
+          <div class="flow-stage flow-stage--energy">
+            <div class="flow-icon">
+              <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">
+                <path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="currentColor" />
+              </svg>
+            </div>
+            <span class="flow-label">Energy</span>
+          </div>
         </div>
         <span class="tag tag--dark">99% PURITY CERTIFIED</span>
         <span class="tag tag--blue">COLD&#8209;CHAIN PRESERVED</span>
       </div>
 
       <div class="product__quote reveal">
-        <p class="eyebrow-link">Unmatched Potency</p>
-        <p>&ldquo;Formulated to exceed pharmaceutical purity benchmarks, engineering cellular uptake that is
-        measurably superior to standard NAD&#43; formulations.&rdquo; &mdash; Independent Purity Analysis, 2024</p>
+        <p class="eyebrow-link">Why NAD+?</p>
+        <p> </p>
+        <p>
+          NAD+ is a naturally occurring coenzyme found in every cell of the body.</p>
+
+        <p>As we age, NAD+ levels decline, which may affect energy production, cognitive performance and cellular
+          repair.</p>
+
+        <p>NAD+ Therapy aims to replenish these levels under medical supervision.</p>
+        <!-- <p>&ldquo;Formulated to exceed pharmaceutical purity benchmarks, engineering cellular uptake that is
+        measurably superior to standard NAD&#43; formulations.&rdquo; &mdash; Independent Purity Analysis, 2024</p> -->
       </div>
     </div>
   </section>
@@ -119,25 +185,46 @@
   <!-- ============ PROBLEM / AGITATION ============ -->
   <section class="problem">
     <div class="container">
-      <h2 class="problem__title reveal">Constantly Exhausted? Your Cells Might Be <span class="hl">Running on Empty.</span></h2>
+      <h2 class="problem__title reveal">Constantly Exhausted? Your Cells Might Be <span class="hl">Running on
+          Empty.</span></h2>
 
       <div class="problem__grid">
         <article class="pcard reveal">
-          <div class="pcard__img pcard__img--coffee"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 4c0 1-1 1-1 2M12 4c0 1-1 1-1 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
-          <h3>Coffee Addiction</h3>
-          <p>Relying on caffeine just to function? You're borrowing energy your cells can't actually afford to repay.</p>
+          <div class="pcard__img pcard__img--coffee"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+              <path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linejoin="round" />
+              <path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="1.6" />
+              <path d="M8 4c0 1-1 1-1 2M12 4c0 1-1 1-1 2" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg></div>
+          <h3>Chronic Fatigue</h3>
+          <p>Constantly feeling exhausted, even after a full night's sleep? Persistent fatigue can affect your
+            productivity, mood and overall quality of life. NAD+ therapy aims to support your body's natural cellular
+            energy production, helping you feel more energised throughout the day.
+          </p>
         </article>
 
         <article class="pcard reveal">
-          <div class="pcard__img pcard__img--fog"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <h3>Brain Fog</h3>
-          <p>Trouble focusing and mid&#8209;day crashes are early signs of mitochondrial strain and declining NAD&#43;.</p>
+          <div class="pcard__img pcard__img--fog"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+              <path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z"
+                fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg></div>
+          <h3>High Stress</h3>
+          <p>Long working hours, demanding schedules and chronic stress may place significant strain on your body. Over
+            time, this can contribute to mental fatigue and reduced resilience. NAD+ therapy may help support cellular
+            function during periods of prolonged stress.
+          </p>
         </article>
 
         <article class="pcard reveal">
-          <div class="pcard__img pcard__img--age"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-          <h3>Accelerated Aging</h3>
-          <p>Lower NAD&#43; levels slow DNA repair &mdash; a driver of visible skin aging and sluggish metabolic recovery.</p>
+          <div class="pcard__img pcard__img--age"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
+              <path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" />
+            </svg></div>
+          <h3>Poor Sleep</h3>
+            <p>Waking up feeling unrefreshed despite spending enough time in bed? Poor-quality sleep can impact
+              focus, energy and recovery. Supporting your body's natural repair processes may contribute to improved
+              overall wellbeing.</p>
         </article>
       </div>
 
@@ -162,29 +249,81 @@
         <article class="bcard reveal">
           <div class="bcard__img bcard__img--brain" aria-hidden="true"></div>
           <div class="bcard__body">
-            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-            <h3>Banish Brain Fog</h3>
-            <p>Enhance cognitive function, sharpen focus, and help protect against age&#8209;related neurodegeneration.</p>
+            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z"
+                  fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h3>Improve Mental Clarity</h3>
+            <p>Many individuals report feeling more alert and mentally focused after improving their overall cellular health. NAD+ therapy aims to support brain energy metabolism, helping you stay focused during demanding work and daily activities.
+            </p>
           </div>
         </article>
 
         <article class="bcard reveal">
           <div class="bcard__img bcard__img--dna" aria-hidden="true"></div>
           <div class="bcard__body">
-            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-            <h3>Cellular Anti&#8209;Aging</h3>
-            <p>Activate longevity pathways and support DNA repair to rejuvenate your body from the inside out.</p>
+            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linecap="round" />
+              </svg></div>
+            <h3>Support Healthy Ageing</h3>
+            <p>NAD+ is involved in many cellular processes associated with healthy ageing. Maintaining adequate NAD+ levels may support your body's natural ability to repair cells and promote long-term vitality as you age.</p>
           </div>
         </article>
 
         <article class="bcard reveal">
           <div class="bcard__img bcard__img--iv" aria-hidden="true"></div>
           <div class="bcard__body">
-            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
-            <h3>Peak Vitality</h3>
-            <p>Boost ATP production in the mitochondria for sustained physical stamina and rapid recovery.</p>
+            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linejoin="round" />
+              </svg></div>
+            <h3>Reduce Fatigue</h3>
+            <p>When your cells produce energy more efficiently, your body may feel less physically and mentally drained. NAD+ therapy is commonly explored by individuals looking to improve energy levels and reduce persistent fatigue.</p>
           </div>
         </article>
+      </div>
+
+      <div class="additional-benefits reveal">
+        <p class="additional-benefits__title">Additional Potential Benefits:</p>
+        <ul class="ab-list">
+          <li>
+            <span class="ab-check ab-check--blue">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </span>
+            Support Cellular Energy Production
+          </li>
+          <li>
+            <span class="ab-check ab-check--green">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </span>
+            Enhance Recovery &amp; Resilience
+          </li>
+          <li>
+            <span class="ab-check ab-check--gold">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </span>
+            Promote Overall Wellness
+          </li>
+          <li>
+            <span class="ab-check ab-check--blue">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </span>
+            Complement a Healthy Lifestyle
+          </li>
+          <li>
+            <span class="ab-check ab-check--green">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </span>
+            Support Active Living
+          </li>
+          <li>
+            <span class="ab-check ab-check--gold">
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </span>
+            Physician&#8209;Guided Personalised Care
+          </li>
+        </ul>
       </div>
     </div>
   </section>
@@ -202,16 +341,32 @@
 
         <ul class="quality__list">
           <li>
-            <span class="qicon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M10 2h4v6l4 9a3 3 0 0 1-2.7 4H8.7A3 3 0 0 1 6 17l4-9V2z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-            <div><strong>99% Purity Protocol</strong><p>Triple&#8209;filtered through a proprietary cold&#8209;chain process to prevent oxidation.</p></div>
+            <span class="qicon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M10 2h4v6l4 9a3 3 0 0 1-2.7 4H8.7A3 3 0 0 1 6 17l4-9V2z" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linejoin="round" />
+              </svg></span>
+            <div><strong>99% Purity Protocol</strong>
+              <p>Triple&#8209;filtered through a proprietary cold&#8209;chain process to prevent oxidation.</p>
+            </div>
           </li>
           <li>
-            <span class="qicon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <div><strong>GMP &amp; FDA Compliance</strong><p>Every batch is independently tested for sterility and precise concentration.</p></div>
+            <span class="qicon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg></span>
+            <div><strong>GMP &amp; FDA Compliance</strong>
+              <p>Every batch is independently tested for sterility and precise concentration.</p>
+            </div>
           </li>
           <li>
-            <span class="qicon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 12l2 2 4-4M12 3l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V6l8-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
-            <div><strong>Doctor&#8209;Led Administration</strong><p>Your therapy is tailored and monitored by board&#8209;certified specialists.</p></div>
+            <span class="qicon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path d="M9 12l2 2 4-4M12 3l8 3v6c0 5-3.5 8.5-8 11-4.5-2.5-8-6-8-11V6l8-3z" fill="none"
+                  stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              </svg></span>
+            <div><strong>Doctor&#8209;Led Administration</strong>
+              <p>Your therapy is tailored and monitored by board&#8209;certified specialists.</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -233,7 +388,8 @@
     <div class="container">
       <p class="section__eyebrow reveal">Treatment Journey</p>
       <h2 class="section__title reveal">Your Path to Restoration</h2>
-      <p class="journey__sub reveal">A seamless, concierge experience designed for the high&#8209;performance individual.</p>
+      <p class="journey__sub reveal">A seamless, concierge experience designed for the high&#8209;performance
+        individual.</p>
 
       <div class="journey__grid">
         <article class="jcard reveal">
@@ -255,6 +411,53 @@
     </div>
   </section>
 
+  <!-- ============ PROTOCOLS / PRICING ============ -->
+  <section class="protocols" id="protocols">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light section__eyebrow--center reveal">Choose Your Fit</p>
+      <h2 class="section__title section__title--light protocols__title reveal">Choose Your Protocol</h2>
+
+      <div class="protocols__grid">
+        <article class="protocol-card reveal">
+          <span class="protocol-card__badge protocol-card__badge--muted">Starter</span>
+          <span class="protocol-card__code">ZV&#8209;01</span>
+          <h3>Single IV Session</h3>
+          <div class="protocol-card__icon">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="currentColor" /></svg>
+          </div>
+          <a href="#quiz" class="btn btn--pcard">Book This Protocol</a>
+          <span class="protocol-card__price">Starting at $249</span>
+          <p>A one&#8209;time cellular restoration session &mdash; ideal for first&#8209;time guests exploring NAD&#43; therapy.</p>
+        </article>
+
+        <article class="protocol-card protocol-card--active reveal">
+          <span class="protocol-card__badge protocol-card__badge--gold">Bestseller</span>
+          <span class="protocol-card__code">ZV&#8209;02</span>
+          <h3>Monthly Membership</h3>
+          <div class="protocol-card__icon">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8" /><path d="M12 7v5l3.5 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
+          </div>
+          <a href="#quiz" class="btn btn--pcard btn--pcard-gold">Book This Protocol</a>
+          <span class="protocol-card__price">Starting at $699/mo</span>
+          <p>Four guided sessions per month with ongoing biomarker tracking and dosage refinement.</p>
+        </article>
+
+        <article class="protocol-card reveal">
+          <span class="protocol-card__badge protocol-card__badge--blue">New</span>
+          <span class="protocol-card__code">ZV&#8209;03</span>
+          <h3>VIP Concierge Protocol</h3>
+          <div class="protocol-card__icon">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path d="M4 18h16M4 18l1.5-8L9 13l3-7 3 7 3.5-3L20 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" /></svg>
+          </div>
+          <a href="#quiz" class="btn btn--pcard">Book This Protocol</a>
+          <span class="protocol-card__price">Starting at $1,499/mo</span>
+          <p>Fully personalised at&#8209;home or in&#8209;clinic care with priority physician access.</p>
+        </article>
+      </div>
+      <p class="disclaimer-note disclaimer-note--light reveal">Pricing shown is illustrative &mdash; confirm current rates with your clinic before publishing.</p>
+    </div>
+  </section>
+
   <!-- ============ TESTIMONIALS ============ -->
   <section class="testimonials" id="testimonials">
     <div class="container">
@@ -264,7 +467,9 @@
         <div class="video-card reveal">
           <div class="video-card__thumb">
             <button class="video-card__play" aria-label="Play testimonial video">
-              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M8 5l12 7-12 7V5z" fill="currentColor"/></svg>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path d="M8 5l12 7-12 7V5z" fill="currentColor" />
+              </svg>
             </button>
             <span class="video-card__label">CLIENT TESTIMONIAL</span>
           </div>
@@ -275,7 +480,7 @@
           <article class="quote-card reveal">
             <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             <p>&ldquo;The mental clarity was almost immediate. I went from feeling perpetually drained to having
-            the focus of my twenties again &mdash; a total game&#8209;changer for my work.&rdquo;</p>
+              the focus of my twenties again &mdash; a total game&#8209;changer for my work.&rdquo;</p>
             <div class="quote-card__author">
               <span class="avatar">SJ</span>
               <div><strong>Sarah J.</strong><span>Venture Partner</span></div>
@@ -284,7 +489,7 @@
           <article class="quote-card reveal">
             <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
             <p>&ldquo;After years of international travel, this is the only protocol that actually eliminates my
-            jet lag and brain fog. The whole experience feels genuinely premium.&rdquo;</p>
+              jet lag and brain fog. The whole experience feels genuinely premium.&rdquo;</p>
             <div class="quote-card__author">
               <span class="avatar avatar--gold">ML</span>
               <div><strong>Marc L.</strong><span>Tech Executive</span></div>
@@ -292,7 +497,8 @@
           </article>
         </div>
       </div>
-      <p class="disclaimer-note reveal">Sample testimonials shown for illustration &mdash; replace with your verified client reviews.</p>
+      <p class="disclaimer-note reveal">Sample testimonials shown for illustration &mdash; replace with your verified
+        client reviews.</p>
     </div>
   </section>
 
@@ -305,7 +511,9 @@
             <h3>Cellular Health Assessment</h3>
             <span id="quizStepLabel">Step 1 of 4</span>
           </div>
-          <div class="quiz__progress"><div class="quiz__progress-bar" id="quizProgressBar"></div></div>
+          <div class="quiz__progress">
+            <div class="quiz__progress-bar" id="quizProgressBar"></div>
+          </div>
         </div>
         <div class="quiz__body" id="quizBody"></div>
       </div>
@@ -322,25 +530,29 @@
           <summary>How soon will I feel the effects after a session?
             <span class="faq__plus" aria-hidden="true"></span>
           </summary>
-          <p>Many clients notice improved mental clarity within hours, with energy benefits building over the following 24&ndash;48 hours as NAD&#43; is absorbed at the cellular level.</p>
+          <p>Many clients notice improved mental clarity within hours, with energy benefits building over the following
+            24&ndash;48 hours as NAD&#43; is absorbed at the cellular level.</p>
         </details>
         <details class="faq__item">
           <summary>How long does one session take? Is there any downtime?
             <span class="faq__plus" aria-hidden="true"></span>
           </summary>
-          <p>A typical infusion takes 45&ndash;90 minutes in a private treatment pod. There is no downtime &mdash; you can resume normal activity immediately after.</p>
+          <p>A typical infusion takes 45&ndash;90 minutes in a private treatment pod. There is no downtime &mdash; you
+            can resume normal activity immediately after.</p>
         </details>
         <details class="faq__item">
           <summary>I'm not sick, just always tired and foggy. Is NAD&#43; therapy right for me?
             <span class="faq__plus" aria-hidden="true"></span>
           </summary>
-          <p>Absolutely. Most clients aren't unwell &mdash; they're simply running on depleted cellular reserves. NAD&#43; therapy is designed to restore that baseline, not treat illness.</p>
+          <p>Absolutely. Most clients aren't unwell &mdash; they're simply running on depleted cellular reserves.
+            NAD&#43; therapy is designed to restore that baseline, not treat illness.</p>
         </details>
         <details class="faq__item">
           <summary>How often do I need therapy to maintain peak results?
             <span class="faq__plus" aria-hidden="true"></span>
           </summary>
-          <p>Most clients start with weekly sessions for the first month, then shift to a monthly maintenance schedule based on their personalized consultation.</p>
+          <p>Most clients start with weekly sessions for the first month, then shift to a monthly maintenance schedule
+            based on their personalized consultation.</p>
         </details>
       </div>
     </div>
@@ -367,10 +579,12 @@
     </div>
     <div class="container footer__base">
       <span>&copy; <span id="year"></span> Zell&#8209;V Regenerative Medicine. All rights reserved.</span>
-      <span class="footer__disclaimer">These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease.</span>
+      <span class="footer__disclaimer">These statements have not been evaluated by the FDA. This product is not intended
+        to diagnose, treat, cure, or prevent any disease.</span>
     </div>
   </footer>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
+
 </html>

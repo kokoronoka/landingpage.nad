@@ -80,46 +80,35 @@
   });
 
   /* ============================================================
-     HERO: cursor-following spotlight reveal
+     HERO: soft cursor-following glow blob
      ============================================================ */
   var hero = document.getElementById('hero');
-  var revealLayer = document.getElementById('heroReveal');
-  if (hero && revealLayer) {
-    var SPOTLIGHT_R = window.innerWidth < 640 ? 170 : 260;
-    revealLayer.style.setProperty('--r', SPOTLIGHT_R + 'px');
+  var heroBlob = document.getElementById('heroBlob');
+  if (hero && heroBlob && !prefersReduced) {
+    var mouse = { x: -999, y: -999 };
+    var smooth = { x: -999, y: -999 };
+    var hasMoved = false;
 
-    if (prefersReduced) {
-      revealLayer.style.setProperty('--mx', '50%');
-      revealLayer.style.setProperty('--my', '45%');
-    } else {
-      var mouse = { x: -999, y: -999 };
-      var smooth = { x: -999, y: -999 };
-
-      function onMove(clientX, clientY) {
-        var rect = hero.getBoundingClientRect();
-        mouse.x = clientX - rect.left;
-        mouse.y = clientY - rect.top;
-      }
-      hero.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); });
-      hero.addEventListener('mouseleave', function () { mouse.x = -999; mouse.y = -999; });
-      hero.addEventListener('touchmove', function (e) {
-        if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
-      }, { passive: true });
-
-      function loop() {
-        smooth.x += (mouse.x - smooth.x) * 0.1;
-        smooth.y += (mouse.y - smooth.y) * 0.1;
-        revealLayer.style.setProperty('--mx', smooth.x + 'px');
-        revealLayer.style.setProperty('--my', smooth.y + 'px');
-        requestAnimationFrame(loop);
-      }
-      loop();
-
-      window.addEventListener('resize', function () {
-        SPOTLIGHT_R = window.innerWidth < 640 ? 170 : 260;
-        revealLayer.style.setProperty('--r', SPOTLIGHT_R + 'px');
-      });
+    function onMove(clientX, clientY) {
+      var rect = hero.getBoundingClientRect();
+      mouse.x = clientX - rect.left;
+      mouse.y = clientY - rect.top;
+      hasMoved = true;
     }
+    hero.addEventListener('mousemove', function (e) { onMove(e.clientX, e.clientY); });
+    hero.addEventListener('touchmove', function (e) {
+      if (e.touches && e.touches[0]) onMove(e.touches[0].clientX, e.touches[0].clientY);
+    }, { passive: true });
+
+    function loop() {
+      if (hasMoved) {
+        smooth.x += (mouse.x - smooth.x) * 0.06;
+        smooth.y += (mouse.y - smooth.y) * 0.06;
+        heroBlob.style.transform = 'translate(' + (smooth.x - 240) + 'px, ' + (smooth.y - 240) + 'px)';
+      }
+      requestAnimationFrame(loop);
+    }
+    loop();
   }
 
   /* ============================================================
