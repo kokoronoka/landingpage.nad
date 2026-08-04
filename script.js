@@ -1,5 +1,5 @@
 /* ============================================================
-   ZELL-V NAD+  |  Interactions
+   ZÉLL-V NAD+  |  Interactions
    ============================================================ */
 (function () {
   'use strict';
@@ -28,6 +28,21 @@
     document.body.style.overflow = open ? 'hidden' : '';
   });
   menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeMenu); });
+
+  /* ---------- Nav: glass-over-hero -> solid-fixed on scroll ---------- */
+  var nav = document.getElementById('nav');
+  var heroSection = document.getElementById('hero');
+  if (nav && heroSection) {
+    var onNavScroll = function () {
+      var threshold = heroSection.offsetHeight - nav.offsetHeight;
+      var past = window.scrollY > threshold;
+      nav.classList.toggle('is-fixed', past);
+      nav.classList.toggle('scrolled', past);
+    };
+    window.addEventListener('scroll', onNavScroll, { passive: true });
+    window.addEventListener('resize', onNavScroll);
+    onNavScroll();
+  }
 
   /* ---------- Scroll reveal ---------- */
   var revealEls = document.querySelectorAll('.reveal');
@@ -267,5 +282,127 @@
     }
 
     renderStep();
+  }
+
+  /* ============================================================
+     WHATSAPP WIDGET
+     ============================================================ */
+  var waToggle = document.getElementById('waToggle');
+  var waPanel = document.getElementById('waPanel');
+  var waCollapse = document.getElementById('waCollapse');
+  if (waToggle && waPanel) {
+    function setWaOpen(open) {
+      waPanel.classList.toggle('open', open);
+      waPanel.setAttribute('aria-hidden', String(!open));
+      waToggle.setAttribute('aria-expanded', String(open));
+    }
+    waToggle.addEventListener('click', function () {
+      setWaOpen(!waPanel.classList.contains('open'));
+    });
+    if (waCollapse) {
+      waCollapse.addEventListener('click', function () { setWaOpen(false); });
+    }
+    document.addEventListener('click', function (e) {
+      if (!waPanel.classList.contains('open')) return;
+      if (waPanel.contains(e.target) || waToggle.contains(e.target)) return;
+      setWaOpen(false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setWaOpen(false);
+    });
+  }
+
+  /* ============================================================
+     PROBLEM SECTION: scroll-driven sticky image swap
+     ============================================================ */
+  var problemItems = document.querySelectorAll('.problem-scroll__item');
+  var problemImgs = document.querySelectorAll('.problem-scroll__img');
+  if (problemItems.length && problemImgs.length) {
+    function setActiveProblem(idx) {
+      problemItems.forEach(function (el) { el.classList.toggle('is-active', el.getAttribute('data-index') === String(idx)); });
+      problemImgs.forEach(function (el) { el.classList.toggle('is-active', el.getAttribute('data-slot') === String(idx)); });
+    }
+    if ('IntersectionObserver' in window) {
+      var pObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) setActiveProblem(e.target.getAttribute('data-index'));
+        });
+      }, { rootMargin: '-45% 0px -45% 0px', threshold: 0 });
+      problemItems.forEach(function (el) { pObs.observe(el); });
+    }
+  }
+
+  /* ============================================================
+     GALLERY CAROUSEL — auto-slide + manual controls
+     ============================================================ */
+  var carousel = document.getElementById('carousel');
+  var track = document.getElementById('carouselTrack');
+  var dotsWrap = document.getElementById('carouselDots');
+  var prevBtn = document.getElementById('carouselPrev');
+  var nextBtn = document.getElementById('carouselNext');
+
+  if (carousel && track && dotsWrap) {
+    var slides = Array.prototype.slice.call(track.children);
+    var count = slides.length;
+    var index = 0;
+    var AUTO_MS = 4500;
+    var timer = null;
+
+    slides.forEach(function (_, i) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+      if (i === 0) dot.classList.add('is-active');
+      dot.addEventListener('click', function () { goTo(i); restartAuto(); });
+      dotsWrap.appendChild(dot);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+
+    function render() {
+      track.style.transform = 'translateX(-' + (index * 100) + '%)';
+      dots.forEach(function (d, i) { d.classList.toggle('is-active', i === index); });
+    }
+    function goTo(i) { index = (i + count) % count; render(); }
+    function next() { goTo(index + 1); }
+    function prev() { goTo(index - 1); }
+
+    function startAuto() {
+      if (prefersReduced || count <= 1) return;
+      timer = setInterval(next, AUTO_MS);
+    }
+    function stopAuto() { clearInterval(timer); }
+    function restartAuto() { stopAuto(); startAuto(); }
+
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); restartAuto(); });
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); restartAuto(); });
+
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
+
+    /* Touch / drag swipe */
+    var dragging = false, startX = 0, deltaX = 0;
+    function dragStart(x) { dragging = true; startX = x; deltaX = 0; stopAuto(); track.style.transition = 'none'; }
+    function dragMove(x) {
+      if (!dragging) return;
+      deltaX = x - startX;
+      track.style.transform = 'translateX(calc(-' + (index * 100) + '% + ' + deltaX + 'px))';
+    }
+    function dragEnd() {
+      if (!dragging) return;
+      dragging = false;
+      track.style.transition = '';
+      if (Math.abs(deltaX) > 60) { deltaX < 0 ? next() : prev(); }
+      else { render(); }
+      startAuto();
+    }
+    track.addEventListener('touchstart', function (e) { dragStart(e.touches[0].clientX); }, { passive: true });
+    track.addEventListener('touchmove', function (e) { dragMove(e.touches[0].clientX); }, { passive: true });
+    track.addEventListener('touchend', dragEnd);
+    track.addEventListener('mousedown', function (e) { dragStart(e.clientX); e.preventDefault(); });
+    window.addEventListener('mousemove', function (e) { dragMove(e.clientX); });
+    window.addEventListener('mouseup', dragEnd);
+
+    render();
+    startAuto();
   }
 })();

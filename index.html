@@ -5,15 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Zell-V NAD+ — pharmaceutical-grade NAD+ at 99% purity, manufactured in GMP facilities under FDA-enforced standards. Restore your energy at the cellular level." />
-  <title>Zell-V NAD+ | Pharmaceutical-Grade Cellular Restoration</title>
+    content="Zéll-V NAD+ — pharmaceutical-grade NAD+ at 99% purity, manufactured in GMP facilities under FDA-enforced standards. Restore your energy at the cellular level." />
+  <title></title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=12" />
+  <link rel="stylesheet" href="styles.css?v=25" />
 </head>
 
 <body>
@@ -23,29 +23,32 @@
     <a href="#quiz">Take the 60&#8209;second Cellular Health Assessment <span aria-hidden="true">&rarr;</span></a>
   </div>
 
-  <!-- ============ NAVBAR ============ -->
-  <header class="nav" id="nav">
-    <div class="nav__inner">
-      <a href="#hero" class="brand" aria-label="Zell-V NAD home">
-        <span class="brand__mark">V</span>
-        <span class="brand__text">ZELL&#8209;V <em>NAD&#43;</em></span>
-      </a>
+  <!-- ============ HERO (light, airy, Seed-inspired) ============ -->
+  <section class="hero" id="hero">
+    <!-- ============ NAVBAR (glass overlay) ============ -->
+    <header class="nav" id="nav">
+      <div class="nav__inner">
+        <a href="#hero" class="brand" aria-label="Zéll-V NAD home">
+          <span class="brand__mark">V</span>
+          <span class="brand__text">ZÉLL&#8209;V <em>NAD&#43;</em></span>
+        </a>
 
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#benefits">Benefits</a>
-        <a href="#quality">Quality</a>
-        <a href="#journey">Journey</a>
-        <a href="#protocols">Protocols</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+        <nav class="nav__links" aria-label="Primary">
+          <a href="#benefits">Benefits</a>
+          <a href="#quality">Quality</a>
+          <a href="#journey">Journey</a>
+          <a href="#protocols">Protocols</a>
+          <a href="#faq">FAQ</a>
+        </nav>
 
-      <div class="nav__actions">
-        <a href="#quiz" class="btn btn--gold btn--sm">Take the Quiz</a>
-        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
+        <div class="nav__actions">
+          <a href="#quiz" class="btn btn--gold btn--sm">Take the Quiz</a>
+          <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
       </div>
-    </div>
+    </header>
 
     <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
       <a href="#benefits">Benefits</a>
@@ -55,10 +58,7 @@
       <a href="#faq">FAQ</a>
       <a href="#quiz" class="btn btn--gold">Take the Quiz</a>
     </div>
-  </header>
 
-  <!-- ============ HERO (light, airy, Seed-inspired) ============ -->
-  <section class="hero" id="hero">
     <div class="hero__blob" id="heroBlob" aria-hidden="true"></div>
     <div class="hero__glow" aria-hidden="true"></div>
 
@@ -170,7 +170,8 @@
         <p class="eyebrow-link">Why NAD+?</p>
         <p> </p>
         <p>
-          NAD+ is a naturally occurring coenzyme found in every cell of the body.</p>
+          NAD+ (Nicotinamide Adenine Dinucleotide) is a vital coenzyme found in every cell of your body. It plays a
+          crucial role in energy production, DNA repair, and healthy cell function.</p>
 
         <p>As we age, NAD+ levels decline, which may affect energy production, cognitive performance and cellular
           repair.</p>
@@ -188,38 +189,73 @@
       <h2 class="problem__title reveal">Constantly Exhausted? Your Cells Might Be <span class="hl">Running on
           Empty.</span></h2>
 
-      <div class="problem__grid">
-        <article class="pcard reveal">
-          <div class="pcard__img pcard__img--coffee"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
-              <path d="M4 10h13v4a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-4z" fill="none" stroke="currentColor"
-                stroke-width="1.6" stroke-linejoin="round" />
-              <path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="1.6" />
-              <path d="M8 4c0 1-1 1-1 2M12 4c0 1-1 1-1 2" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" />
-            </svg></div>
-          <h3>Chronic Fatigue</h3>
-          <p>Persistent fatigue can affect your productivity, mood and overall quality of life. NAD+ therapy aims to support your body's natural cellular energy production, helping you feel more energised throughout the day.
-          </p>
-        </article>
+      <div class="problem-scroll">
+        <div class="problem-scroll__visual reveal">
+          <div class="problem-scroll__frame">
+            <div class="problem-scroll__img is-active" data-slot="0">
+              <img class="problem-scroll__realimg" src="assets/images/coffeeaddiction.png" alt="Coffee Addiction" />
+            </div>
+            <div class="problem-scroll__img" data-slot="1">
+              <img class="problem-scroll__realimg" src="assets/images/brainfog.png" alt="Brain Fog" />
+            </div>
+            <div class="problem-scroll__img" data-slot="2">
+              <img class="problem-scroll__realimg" src="assets/images/AcceleratedAging.png" alt="Accelerated Aging" />
+            </div>
+            <div class="problem-scroll__img" data-slot="3">
+              <img class="problem-scroll__realimg" src="assets/images/ChronicFatigue.png" alt="Chronic Fatigue" />
+            </div>
+            <div class="problem-scroll__img" data-slot="4">
+              <img class="problem-scroll__realimg" src="assets/images/HighStress.png" alt="High Stress" />
+            </div>
+            <div class="problem-scroll__img" data-slot="5">
+              <img class="problem-scroll__realimg" src="assets/images/PoorSleep.png" alt="Poor Sleep" />
+            </div>
+          </div>
+        </div>
 
-        <article class="pcard reveal">
-          <div class="pcard__img pcard__img--fog"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
-              <path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z"
-                fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-            </svg></div>
-          <h3>High Stress</h3>
-          <p>Long working hours, demanding schedules and chronic stress may place significant strain on your body. NAD+ therapy may help support cellular function during periods of prolonged stress.
-          </p>
-        </article>
+        <div class="problem-scroll__list">
+          <article class="problem-scroll__item is-active" data-index="0">
+            <span class="problem-scroll__num">01</span>
+            <h3>Coffee Addiction</h3>
+            <p>Relying on caffeine just to function? You're borrowing energy your cells can't actually afford to repay.</p>
+          </article>
 
-        <article class="pcard reveal">
-          <div class="pcard__img pcard__img--age"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">
-              <path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor"
-                stroke-width="1.6" stroke-linecap="round" />
-            </svg></div>
-          <h3>Poor Sleep</h3>
-            <p>Poor-quality sleep can impact focus, energy and recovery. Supporting your body's natural repair processes may contribute to improved overall wellbeing..</p>
-        </article>
+          <article class="problem-scroll__item" data-index="1">
+            <span class="problem-scroll__num">02</span>
+            <h3>Brain Fog</h3>
+            <p>Trouble focusing and mid-day crashes are early signs of mitochondrial strain and declining NAD+.</p>
+          </article>
+
+          <article class="problem-scroll__item" data-index="2">
+            <span class="problem-scroll__num">03</span>
+            <h3>Accelerated Aging</h3>
+            <p>Lower NAD+ levels slow DNA repair - a driver of visible skin aging and sluggish metabolic recovery.</p>
+          </article>
+
+          <article class="problem-scroll__item" data-index="3">
+            <span class="problem-scroll__num">04</span>
+            <h3>Chronic Fatigue</h3>
+            <p>Constantly feeling exhausted, even after a full night's sleep? Persistent fatigue can affect your
+              productivity, mood and overall quality of life. NAD+ therapy aims to support your body's natural cellular
+              energy production, helping you feel more energised throughout the day.</p>
+          </article>
+
+          <article class="problem-scroll__item" data-index="4">
+            <span class="problem-scroll__num">05</span>
+            <h3>High Stress</h3>
+            <p>Long working hours, demanding schedules and chronic stress may place significant strain on your body. Over
+              time, this can contribute to mental fatigue and reduced resilience. NAD+ therapy may help support cellular
+              function during periods of prolonged stress.</p>
+          </article>
+
+          <article class="problem-scroll__item" data-index="5">
+            <span class="problem-scroll__num">06</span>
+            <h3>Poor Sleep</h3>
+            <p>Waking up feeling unrefreshed despite spending enough time in bed? Poor-quality sleep can impact focus,
+              energy and recovery. Supporting your body's natural repair processes may contribute to improved overall
+              wellbeing.</p>
+          </article>
+        </div>
       </div>
 
       <div class="stat-banner reveal">
@@ -237,7 +273,7 @@
   <section class="benefits" id="benefits">
     <div class="container">
       <p class="section__eyebrow reveal">Biological Restoration</p>
-      <h2 class="section__title reveal">The Zell&#8209;V Standard of Vitality</h2>
+      <h2 class="section__title reveal">The Zéll&#8209;V Standard of Vitality</h2>
 
       <div class="benefits__grid">
         <article class="bcard reveal">
@@ -248,7 +284,9 @@
                   fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
               </svg></div>
             <h3>Improve Mental Clarity</h3>
-            <p>Many individuals report feeling more alert and mentally focused after improving their overall cellular health. NAD+ therapy aims to support brain energy metabolism, helping you stay focused during demanding work and daily activities.
+            <p>Many individuals report feeling more alert and mentally focused after improving their overall cellular
+              health. NAD+ therapy aims to support brain energy metabolism, helping you stay focused during demanding
+              work and daily activities.
             </p>
           </div>
         </article>
@@ -261,7 +299,9 @@
                   stroke-width="1.6" stroke-linecap="round" />
               </svg></div>
             <h3>Support Healthy Ageing</h3>
-            <p>NAD+ is involved in many cellular processes associated with healthy ageing. Maintaining adequate NAD+ levels may support your body's natural ability to repair cells and promote long-term vitality as you age.</p>
+            <p>NAD+ is involved in many cellular processes associated with healthy ageing. Maintaining adequate NAD+
+              levels may support your body's natural ability to repair cells and promote long-term vitality as you age.
+            </p>
           </div>
         </article>
 
@@ -273,7 +313,9 @@
                   stroke-linejoin="round" />
               </svg></div>
             <h3>Reduce Fatigue</h3>
-            <p>When your cells produce energy more efficiently, your body may feel less physically and mentally drained. NAD+ therapy is commonly explored by individuals looking to improve energy levels and reduce persistent fatigue.</p>
+            <p>When your cells produce energy more efficiently, your body may feel less physically and mentally drained.
+              NAD+ therapy is commonly explored by individuals looking to improve energy levels and reduce persistent
+              fatigue.</p>
           </div>
         </article>
       </div>
@@ -283,64 +325,85 @@
         <ul class="ab-list">
           <li>
             <span class="ab-check ab-check--blue">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </span>
             Support Cellular Energy Production
           </li>
           <li>
             <span class="ab-check ab-check--green">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </span>
             Enhance Recovery &amp; Resilience
           </li>
           <li>
             <span class="ab-check ab-check--gold">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </span>
             Promote Overall Wellness
           </li>
           <li>
             <span class="ab-check ab-check--blue">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </span>
-            Complement a Healthy Lifestyle
+            Skin Rejuvenation
           </li>
           <li>
             <span class="ab-check ab-check--green">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </span>
             Support Active Living
           </li>
           <li>
             <span class="ab-check ab-check--gold">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
+                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </span>
-            Physician&#8209;Guided Personalised Care
+            Obesity &amp; Metabolic Support
           </li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- ============ QUALITY / WHY ZELL-V (dark) ============ -->
+  <!-- ============ QUALITY / WHY ZÉLL-V (dark) ============ -->
   <section class="quality" id="quality">
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light section__eyebrow--center reveal">Our Approach</p>
-      <h2 class="section__title section__title--light quality__title reveal">Why Zell&#8209;V NAD&#43; Therapy?</h2>
+      <h2 class="section__title section__title--light quality__title reveal">Why Zéll&#8209;V NAD&#43; Therapy?</h2>
       <p class="quality__lede quality__lede--center reveal">
-        Zell&#8209;V provides pharmaceutical&#8209;grade NAD&#43; formulated for clinical use.
+        Zéll&#8209;V provides pharmaceutical&#8209;grade NAD&#43; formulated for clinical use.
         Engineered for maximum bioavailability and safety at every dose.
       </p>
 
       <div class="quality__cards">
         <article class="quality-card reveal">
           <span class="qicon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+              <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linejoin="round" />
               <rect x="5" y="4" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
-              <path d="M8.5 11h7M8.5 14.5h7M8.5 18h4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              <path d="M8.5 11h7M8.5 14.5h7M8.5 18h4.5" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
             </svg></span>
           <h3>Medical Assessment Before Treatment</h3>
-          <p>Every protocol begins with a thorough health review to confirm NAD&#43; therapy is a safe, suitable fit for you.</p>
+          <p>Every protocol begins with a thorough health review to confirm NAD&#43; therapy is a safe, suitable fit for
+            you.</p>
         </article>
 
         <article class="quality-card reveal">
@@ -350,13 +413,16 @@
               <circle cx="12" cy="12" r="1.4" fill="currentColor" />
             </svg></span>
           <h3>Personalised Wellness Planning</h3>
-          <p>Your dosage, frequency, and protocol are tailored to your goals &mdash; not a one&#8209;size&#8209;fits&#8209;all plan.</p>
+          <p>Your dosage, frequency, and protocol are tailored to your goals &mdash; not a
+            one&#8209;size&#8209;fits&#8209;all plan.</p>
         </article>
 
         <article class="quality-card reveal">
           <span class="qicon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path d="M4 19V9M10 19V5M16 19v-7M22 19H2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M4 9l6-4 6 5 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 19V9M10 19V5M16 19v-7M22 19H2" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M4 9l6-4 6 5 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg></span>
           <h3>Ongoing Follow&#8209;up &amp; Progress Monitoring</h3>
           <p>We track your response over time and refine your protocol as your energy and biomarkers evolve.</p>
@@ -365,9 +431,11 @@
         <article class="quality-card reveal">
           <span class="qicon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
               <circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6" />
-              <path d="M3.5 20c.8-3.5 3-5.3 5.5-5.3s4.7 1.8 5.5 5.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M3.5 20c.8-3.5 3-5.3 5.5-5.3s4.7 1.8 5.5 5.3" fill="none" stroke="currentColor"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
               <circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6" />
-              <path d="M15.3 20c.5-2.6 1.9-4.1 3.8-4.3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+              <path d="M15.3 20c.5-2.6 1.9-4.1 3.8-4.3" fill="none" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" />
             </svg></span>
           <h3>Experienced Medical Team</h3>
           <p>Board&#8209;certified physicians and clinicians oversee every session, from consultation to aftercare.</p>
@@ -400,6 +468,10 @@
           <h3>Walk Out Restored</h3>
           <p>Immediate mental clarity and a surge in baseline energy that continues building over 48 hours.</p>
         </article>
+      </div>
+
+      <div class="journey__cta reveal">
+        <a href="#quiz" class="btn btn--gold">Book an Appointment</a>
       </div>
     </div>
   </section>
@@ -466,7 +538,7 @@
             </button>
             <span class="video-card__label">CLIENT TESTIMONIAL</span>
           </div>
-          <p>How Zell&#8209;V Restored My Edge &mdash; A Founder's Journey</p>
+          <p>How Zéll&#8209;V Restored My Edge &mdash; A Founder's Journey</p>
         </div>
 
         <div class="quotes">
@@ -509,6 +581,61 @@
           </div>
         </div>
         <div class="quiz__body" id="quizBody"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY CAROUSEL ============ -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--center reveal">Our Gallery</p>
+      <h2 class="section__title gallery__title reveal">A Glimpse Inside ZÉLL&#8209;V</h2>
+
+      <div class="carousel reveal" id="carousel">
+        <div class="carousel__viewport">
+          <div class="carousel__track" id="carouselTrack">
+            <!-- Replace each .carousel__ph below with: <img class="carousel__img" src="assets/images/gallery-1.jpg" alt="..." /> -->
+            <div class="carousel__slide">
+              <div class="carousel__ph">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+                <span>Image 1 &mdash; replace me</span>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="carousel__ph">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+                <span>Image 2 &mdash; replace me</span>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="carousel__ph">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+                <span>Image 3 &mdash; replace me</span>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="carousel__ph">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+                <span>Image 4 &mdash; replace me</span>
+              </div>
+            </div>
+            <div class="carousel__slide">
+              <div class="carousel__ph">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+                <span>Image 5 &mdash; replace me</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel__arrow carousel__arrow--prev" id="carouselPrev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+        <button class="carousel__arrow carousel__arrow--next" id="carouselNext" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </button>
+
+        <div class="carousel__dots" id="carouselDots"></div>
       </div>
     </div>
   </section>
@@ -556,13 +683,55 @@
     <div class="container cta-final__inner reveal">
       <h2>Don't Let Cellular Fatigue Hold Back Your High&#8209;Performance Life.</h2>
       <p>Reclaim your biological edge with pharmaceutical&#8209;grade NAD&#43; therapy.</p>
-      <a href="#quiz" class="btn btn--gold">Get Your Personalized Plan</a>
+      <a href="#quiz" class="btn btn--gold">Speak to Our Healthcare Consultant</a>
     </div>
   </section>
 
   <footer class="footer">
+    <div class="container">
+      <h3 class="footer-contact-title reveal">Get in Touch</h3>
+
+      <div class="footer-locations">
+        <div class="footer-location reveal">
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3971.8417796727254!2d100.3074602!3d5.4409825000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x304ac3038fe765bf%3A0x205ba451dcba7c72!2sZELL-V%20WELLNESS%20%40%20Penang!5e0!3m2!1sen!2smy!4v1785375579265!5m2!1sen!2smy" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Map to ZÉLL-V Penang"></iframe>
+            <a href="https://www.google.com/maps/search/?api=1&query=ZELL-V+WELLNESS+Penang+28+30+Jln+Tanjung+Tokong+Rd+Tanjung+Tokong+10470+George+Town+Pulau+Pinang" target="_blank" rel="noopener" class="footer-map-link">Maps &#8599;</a>
+          </div>
+          <div class="footer-location-info">
+            <h4>ZÉLL&#8209;V WELLNESS @ Penang</h4>
+            <p>28, 30 Jln Tanjung Tokong Rd, Tanjung Tokong, 10470 George Town, Pulau Pinang</p>
+            <a href="tel:+60124160538" class="footer-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.7 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg> +60 12&#8209;416 0538</a>
+          </div>
+        </div>
+
+        <div class="footer-location reveal">
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8960202597677!2d101.6815639!3d3.1221948999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc499281e0d4eb%3A0x447f38b2d204a453!2sZ%C3%89LL-V%20Wellness%20Hub!5e0!3m2!1sen!2smy!4v1785375420232!5m2!1sen!2smy" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Map to ZÉLL-V Kuala Lumpur"></iframe>
+            <a href="https://www.google.com/maps/search/?api=1&query=ZELL-V+Wellness+Hub+11th+Floor+MENARA+RUYI+30A+LORONG+KAPAR+JALAN+2%2F87G+Jln+Syed+Putra+58000+Kuala+Lumpur" target="_blank" rel="noopener" class="footer-map-link">Maps &#8599;</a>
+          </div>
+          <div class="footer-location-info">
+            <h4>ZÉLL&#8209;V Wellness Hub</h4>
+            <p>11th Floor, Menara Ruyi, 30A Lorong Kapar, Jalan 2/87G, Off Jln Syed Putra, 58000 Kuala Lumpur</p>
+            <a href="tel:+60126975533" class="footer-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.7 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg> +60 12&#8209;697 5533</a>
+          </div>
+        </div>
+
+        <div class="footer-location reveal">
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.413034775348!2d103.67753977573061!3d1.5207439984650177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da73ac858aed57%3A0xf77a36104b96b331!2sZELL-V%20%40%20JOHOR%20BAHRU!5e0!3m2!1sen!2smy!4v1785375625342!5m2!1sen!2smy" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen title="Map to ZÉLL-V Johor Bahru"></iframe>
+            <a href="https://www.google.com/maps/search/?api=1&query=ZELL-V+JOHOR+BAHRU+No.70+Ground+Floor+Jln+Pertama+1+Pusat+Perdagangan+Danga+Utama+81300+Johor+Bahru+Johor" target="_blank" rel="noopener" class="footer-map-link">Maps &#8599;</a>
+          </div>
+          <div class="footer-location-info">
+            <h4>ZÉLL&#8209;V @ Johor Bahru</h4>
+            <p>No. 70, Ground Floor, Jln Pertama 1, Pusat Perdagangan Danga Utama, 81300 Johor Bahru, Johor</p>
+            <a href="tel:+60127599318" class="footer-phone"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8c1.4 2.7 3.7 5 6.4 6.4l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1z"/></svg> +60 12&#8209;759 9318</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="container footer__inner">
-      <span class="brand__text footer__brand">ZELL&#8209;V <em>NAD&#43;</em></span>
+      <span class="brand__text footer__brand">ZÉLL&#8209;V <em>NAD&#43;</em></span>
       <nav class="footer__links" aria-label="Footer">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
@@ -571,13 +740,52 @@
       </nav>
     </div>
     <div class="container footer__base">
-      <span>&copy; <span id="year"></span> Zell&#8209;V Regenerative Medicine. All rights reserved.</span>
+      <span>&copy; <span id="year"></span> Zéll&#8209;V Regenerative Medicine. All rights reserved.</span>
       <span class="footer__disclaimer">These statements have not been evaluated by the FDA. This product is not intended
         to diagnose, treat, cure, or prevent any disease.</span>
     </div>
   </footer>
 
-  <script src="script.js?v=6"></script>
+  <!-- ============ WHATSAPP WIDGET ============ -->
+  <div class="wa-widget">
+    <div class="wa-widget__panel" id="waPanel" aria-hidden="true">
+      <div class="wa-widget__header" id="waCollapse">
+        <div>
+          <strong>Hi</strong>
+          <p>I want to enquire about ZÉLL&#8209;V NAD&#43;&hellip;</p>
+        </div>
+        <span class="wa-widget__chevron" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
+        </span>
+      </div>
+      <ul class="wa-widget__list">
+        <li>
+          <a href="https://wa.me/60126975533?text=Hi%2C%20I%20want%20to%20enquire%20about%20Z%C3%89LL-V%20NAD%2B%E2%80%A6" target="_blank" rel="noopener">
+            <span class="wa-widget__icon"><svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.6L3 29l7.1-2.2c1.8 1 3.8 1.6 5.9 1.6 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.2 1.3 1.3-4.1-.2-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.8 4.7-10.5 10.5-10.5s10.4 4.7 10.4 10.5S21.8 25.7 16 25.7z" /><path d="M21.5 18.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z" /></svg></span>
+            Kuala Lumpur
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/60127599318?text=Hi%2C%20I%20want%20to%20enquire%20about%20Z%C3%89LL-V%20NAD%2B%E2%80%A6" target="_blank" rel="noopener">
+            <span class="wa-widget__icon"><svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.6L3 29l7.1-2.2c1.8 1 3.8 1.6 5.9 1.6 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.2 1.3 1.3-4.1-.2-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.8 4.7-10.5 10.5-10.5s10.4 4.7 10.4 10.5S21.8 25.7 16 25.7z" /><path d="M21.5 18.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z" /></svg></span>
+            Johor Bahru
+          </a>
+        </li>
+        <li>
+          <a href="https://wa.me/60124160538?text=Hi%2C%20I%20want%20to%20enquire%20about%20Z%C3%89LL-V%20NAD%2B%E2%80%A6" target="_blank" rel="noopener">
+            <span class="wa-widget__icon"><svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.6L3 29l7.1-2.2c1.8 1 3.8 1.6 5.9 1.6 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.2 1.3 1.3-4.1-.2-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.8 4.7-10.5 10.5-10.5s10.4 4.7 10.4 10.5S21.8 25.7 16 25.7z" /><path d="M21.5 18.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z" /></svg></span>
+            Penang
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <button class="wa-widget__toggle" id="waToggle" aria-label="Chat with us on WhatsApp" aria-expanded="false">
+      <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.4 8.6 3.4 15.5c0 2.4.7 4.7 1.9 6.6L3 29l7.1-2.2c1.8 1 3.8 1.6 5.9 1.6 7 0 12.6-5.6 12.6-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.2 1.3 1.3-4.1-.2-.4c-1.1-1.7-1.6-3.6-1.6-5.6 0-5.8 4.7-10.5 10.5-10.5s10.4 4.7 10.4 10.5S21.8 25.7 16 25.7z" /><path d="M21.5 18.3c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.1s-.8 1-1 1.2c-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-2-1.8-2.3-.2-.3 0-.5.1-.6.1-.1.3-.4.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5s-.7-1.6-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.1-.3-.2-.6-.4z" /></svg>
+    </button>
+  </div>
+
+  <script src="script.js?v=10"></script>
 </body>
 
 </html>
