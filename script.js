@@ -333,76 +333,95 @@
   }
 
   /* ============================================================
-     GALLERY CAROUSEL — auto-slide + manual controls
+     GALLERY — drag-to-explore strip + scrub bar + auto-slide
      ============================================================ */
-  var carousel = document.getElementById('carousel');
-  var track = document.getElementById('carouselTrack');
-  var dotsWrap = document.getElementById('carouselDots');
-  var prevBtn = document.getElementById('carouselPrev');
-  var nextBtn = document.getElementById('carouselNext');
+  var dragGallery = document.getElementById('dragGallery');
+  var dragTrack = document.getElementById('dragTrack');
+  var dragBar = document.getElementById('dragBar');
+  var dragThumb = document.getElementById('dragThumb');
 
-  if (carousel && track && dotsWrap) {
-    var slides = Array.prototype.slice.call(track.children);
-    var count = slides.length;
-    var index = 0;
-    var AUTO_MS = 4500;
-    var timer = null;
+  if (dragGallery && dragTrack && dragBar && dragThumb) {
+    var maxScroll = function () { return dragTrack.scrollWidth - dragTrack.clientWidth; };
 
-    slides.forEach(function (_, i) {
-      var dot = document.createElement('button');
-      dot.type = 'button';
-      dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-      if (i === 0) dot.classList.add('is-active');
-      dot.addEventListener('click', function () { goTo(i); restartAuto(); });
-      dotsWrap.appendChild(dot);
+    function syncThumb() {
+      var max = maxScroll();
+      var ratio = max > 0 ? dragTrack.scrollLeft / max : 0;
+      var thumbWidthPct = Math.max((dragTrack.clientWidth / dragTrack.scrollWidth) * 100, 8);
+      dragThumb.style.width = thumbWidthPct + '%';
+      dragThumb.style.left = ratio * (100 - thumbWidthPct) + '%';
+    }
+
+    /* ---- Mouse / touch drag on the image strip ---- */
+    var isDown = false, startX = 0, startScroll = 0, moved = false;
+    function pointerX(e) { return (e.touches ? e.touches[0].clientX : e.clientX); }
+
+    dragTrack.addEventListener('mousedown', function (e) {
+      isDown = true; moved = false;
+      startX = pointerX(e); startScroll = dragTrack.scrollLeft;
+      dragGallery.classList.add('is-dragging');
+      stopAuto();
+      e.preventDefault();
     });
-    var dots = Array.prototype.slice.call(dotsWrap.children);
+    window.addEventListener('mousemove', function (e) {
+      if (!isDown) return;
+      var dx = pointerX(e) - startX;
+      if (Math.abs(dx) > 3) moved = true;
+      dragTrack.scrollLeft = startScroll - dx;
+    });
+    window.addEventListener('mouseup', function () {
+      if (!isDown) return;
+      isDown = false;
+      dragGallery.classList.remove('is-dragging');
+      scheduleAuto();
+    });
 
-    function render() {
-      track.style.transform = 'translateX(-' + (index * 100) + '%)';
-      dots.forEach(function (d, i) { d.classList.toggle('is-active', i === index); });
+    dragTrack.addEventListener('touchstart', function (e) {
+      startX = pointerX(e); startScroll = dragTrack.scrollLeft;
+      stopAuto();
+    }, { passive: true });
+    dragTrack.addEventListener('touchend', scheduleAuto, { passive: true });
+
+    dragTrack.addEventListener('scroll', syncThumb, { passive: true });
+
+    /* ---- Scrub bar: click or drag to seek ---- */
+    function seekFromClientX(clientX) {
+      var rect = dragBar.getBoundingClientRect();
+      var pct = Math.min(Math.max((clientX - rect.left) / rect.width, 0), 1);
+      dragTrack.scrollLeft = pct * maxScroll();
     }
-    function goTo(i) { index = (i + count) % count; render(); }
-    function next() { goTo(index + 1); }
-    function prev() { goTo(index - 1); }
+    var barDragging = false;
+    dragBar.addEventListener('mousedown', function (e) {
+      barDragging = true; stopAuto(); seekFromClientX(e.clientX);
+    });
+    window.addEventListener('mousemove', function (e) {
+      if (barDragging) seekFromClientX(e.clientX);
+    });
+    window.addEventListener('mouseup', function () {
+      if (barDragging) { barDragging = false; scheduleAuto(); }
+    });
 
+    /* ---- Gentle auto-slide, pauses on interaction ---- */
+    var autoTimer = null, resumeTimer = null, autoDir = 1;
+    function autoStep() {
+      var max = maxScroll();
+      if (max <= 0) return;
+      if (dragTrack.scrollLeft >= max - 1) autoDir = -1;
+      else if (dragTrack.scrollLeft <= 1) autoDir = 1;
+      dragTrack.scrollLeft += autoDir * 0.6;
+    }
     function startAuto() {
-      if (prefersReduced || count <= 1) return;
-      timer = setInterval(next, AUTO_MS);
+      if (prefersReduced) return;
+      stopAuto();
+      autoTimer = setInterval(autoStep, 20);
     }
-    function stopAuto() { clearInterval(timer); }
-    function restartAuto() { stopAuto(); startAuto(); }
+    function stopAuto() { clearInterval(autoTimer); clearTimeout(resumeTimer); }
+    function scheduleAuto() { clearTimeout(resumeTimer); resumeTimer = setTimeout(startAuto, 1500); }
 
-    if (nextBtn) nextBtn.addEventListener('click', function () { next(); restartAuto(); });
-    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); restartAuto(); });
+    dragGallery.addEventListener('mouseenter', stopAuto);
+    dragGallery.addEventListener('mouseleave', function () { if (!isDown) scheduleAuto(); });
 
-    carousel.addEventListener('mouseenter', stopAuto);
-    carousel.addEventListener('mouseleave', startAuto);
-
-    /* Touch / drag swipe */
-    var dragging = false, startX = 0, deltaX = 0;
-    function dragStart(x) { dragging = true; startX = x; deltaX = 0; stopAuto(); track.style.transition = 'none'; }
-    function dragMove(x) {
-      if (!dragging) return;
-      deltaX = x - startX;
-      track.style.transform = 'translateX(calc(-' + (index * 100) + '% + ' + deltaX + 'px))';
-    }
-    function dragEnd() {
-      if (!dragging) return;
-      dragging = false;
-      track.style.transition = '';
-      if (Math.abs(deltaX) > 60) { deltaX < 0 ? next() : prev(); }
-      else { render(); }
-      startAuto();
-    }
-    track.addEventListener('touchstart', function (e) { dragStart(e.touches[0].clientX); }, { passive: true });
-    track.addEventListener('touchmove', function (e) { dragMove(e.touches[0].clientX); }, { passive: true });
-    track.addEventListener('touchend', dragEnd);
-    track.addEventListener('mousedown', function (e) { dragStart(e.clientX); e.preventDefault(); });
-    window.addEventListener('mousemove', function (e) { dragMove(e.clientX); });
-    window.addEventListener('mouseup', dragEnd);
-
-    render();
+    window.addEventListener('resize', syncThumb);
+    syncThumb();
     startAuto();
   }
 })();

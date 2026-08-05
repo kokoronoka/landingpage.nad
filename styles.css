@@ -634,43 +634,52 @@ ul { list-style: none; }
 /* ============================================================
    GALLERY CAROUSEL
    ============================================================ */
-.gallery { padding: 100px 0 110px; background: var(--white); }
-.gallery__title { text-align: center; margin-bottom: 46px; }
+.gallery { padding: 100px 0 70px; background: var(--cream); }
+.gallery__title { text-align: center; margin-bottom: 18px; }
+.gallery__sub { text-align: center; color: var(--ink-soft); max-width: 520px; margin: 0 auto 30px; font-size: 15.5px; line-height: 1.7; }
+.gallery__hint {
+  text-align: center; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold-dark); margin-bottom: 34px;
+}
 
-.carousel { position: relative; max-width: 920px; margin: 0 auto; }
-.carousel__viewport { border-radius: 22px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(16,24,40,.3); }
-.carousel__track { display: flex; transition: transform .5s var(--ease); }
-.carousel__slide { flex: 0 0 100%; min-width: 0; aspect-ratio: 16/9; }
-.carousel__img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .carousel__ph {
-  width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;
+  width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
   background: linear-gradient(150deg, var(--green-soft), var(--gray-bg));
-  color: var(--green-dark); opacity: .55;
+  color: var(--green-dark); opacity: .6;
 }
-.carousel__ph span { font-size: 13.5px; font-weight: 600; letter-spacing: .02em; }
+.carousel__ph span { font-size: 12px; font-weight: 600; letter-spacing: .02em; }
 
-.carousel__arrow {
-  position: absolute; top: 50%; transform: translateY(-50%); z-index: 5;
-  width: 44px; height: 44px; border-radius: 50%; border: none; cursor: pointer;
-  background: var(--white); color: var(--ink); display: grid; place-items: center;
-  box-shadow: 0 10px 24px -10px rgba(16,24,40,.35);
-  transition: transform .25s var(--ease), background .25s;
+/* ---- Drag-to-explore gallery strip ---- */
+.drag-gallery {
+  width: 100%; overflow: hidden; cursor: grab; margin-bottom: 22px;
+  -webkit-user-select: none; user-select: none;
 }
-.carousel__arrow:hover { background: var(--gold-light); transform: translateY(-50%) scale(1.08); }
-.carousel__arrow--prev { left: -20px; }
-.carousel__arrow--next { right: -20px; }
-
-.carousel__dots { display: flex; justify-content: center; gap: 9px; margin-top: 24px; }
-.carousel__dots button {
-  width: 9px; height: 9px; border-radius: 50%; border: none; padding: 0; cursor: pointer;
-  background: var(--line); transition: background .3s, transform .3s var(--ease);
+.drag-gallery.is-dragging { cursor: grabbing; }
+.drag-gallery__track {
+  display: flex; gap: 18px; padding: 0 24px;
+  overflow-x: auto; scroll-behavior: smooth; scrollbar-width: none;
 }
-.carousel__dots button.is-active { background: var(--green); transform: scale(1.25); }
+.drag-gallery__track::-webkit-scrollbar { display: none; }
+.drag-gallery__item {
+  flex: 0 0 auto; width: clamp(220px, 26vw, 340px); aspect-ratio: 4/3;
+  border-radius: 18px; overflow: hidden; box-shadow: 0 20px 40px -22px rgba(16,24,40,.3);
+  pointer-events: none;
+}
+.drag-gallery__item img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-@media (max-width: 760px) {
-  .carousel__arrow--prev { left: 8px; }
-  .carousel__arrow--next { right: 8px; }
-  .carousel__arrow { width: 38px; height: 38px; }
+.drag-gallery__bar {
+  position: relative; height: 4px; border-radius: 999px; background: var(--line);
+  max-width: 520px; margin: 0 auto; cursor: pointer;
+}
+.drag-gallery__thumb {
+  position: absolute; top: 50%; left: 0; transform: translateY(-50%);
+  height: 8px; border-radius: 999px; background: var(--gold-grad);
+  width: 20%; cursor: grab; box-shadow: 0 4px 10px -2px rgba(201,154,59,.5);
+}
+.drag-gallery__thumb:active { cursor: grabbing; }
+
+@media (max-width: 560px) {
+  .drag-gallery__item { width: clamp(180px, 70vw, 260px); }
 }
 
 /* ============================================================

@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=25" />
+  <link rel="stylesheet" href="styles.css?v=28" />
 </head>
 
 <body>
@@ -588,54 +588,51 @@
   <!-- ============ GALLERY CAROUSEL ============ -->
   <section class="gallery" id="gallery">
     <div class="container">
-      <p class="section__eyebrow section__eyebrow--center reveal">Our Gallery</p>
-      <h2 class="section__title gallery__title reveal">A Glimpse Inside ZÉLL&#8209;V</h2>
+      <p class="section__eyebrow section__eyebrow--center reveal">Wellness Is Also About Environment</p>
+      <h2 class="section__title gallery__title reveal">A Space To Finally Slow Down</h2>
+      <p class="gallery__sub reveal">No rushing. No overthinking. No pressure. Just space for your body and mind to breathe again.</p>
+      <p class="gallery__hint reveal">&larr; Drag to Explore &rarr;</p>
+    </div>
 
-      <div class="carousel reveal" id="carousel">
-        <div class="carousel__viewport">
-          <div class="carousel__track" id="carouselTrack">
-            <!-- Replace each .carousel__ph below with: <img class="carousel__img" src="assets/images/gallery-1.jpg" alt="..." /> -->
-            <div class="carousel__slide">
-              <div class="carousel__ph">
-                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
-                <span>Image 1 &mdash; replace me</span>
-              </div>
-            </div>
-            <div class="carousel__slide">
-              <div class="carousel__ph">
-                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
-                <span>Image 2 &mdash; replace me</span>
-              </div>
-            </div>
-            <div class="carousel__slide">
-              <div class="carousel__ph">
-                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
-                <span>Image 3 &mdash; replace me</span>
-              </div>
-            </div>
-            <div class="carousel__slide">
-              <div class="carousel__ph">
-                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
-                <span>Image 4 &mdash; replace me</span>
-              </div>
-            </div>
-            <div class="carousel__slide">
-              <div class="carousel__ph">
-                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
-                <span>Image 5 &mdash; replace me</span>
-              </div>
-            </div>
+    <div class="drag-gallery reveal" id="dragGallery">
+      <div class="drag-gallery__track" id="dragTrack">
+        <!-- Replace each .carousel__ph below with: <img src="assets/images/gallery-1.jpg" alt="..." /> -->
+        <div class="drag-gallery__item">
+          <div class="carousel__ph">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+            <span>Image 1</span>
           </div>
         </div>
+        <div class="drag-gallery__item">
+          <div class="carousel__ph">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+            <span>Image 2</span>
+          </div>
+        </div>
+        <div class="drag-gallery__item">
+          <div class="carousel__ph">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+            <span>Image 3</span>
+          </div>
+        </div>
+        <div class="drag-gallery__item">
+          <div class="carousel__ph">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+            <span>Image 4</span>
+          </div>
+        </div>
+        <div class="drag-gallery__item">
+          <div class="carousel__ph">
+            <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+            <span>Image 5</span>
+          </div>
+        </div>
+      </div>
+    </div>
 
-        <button class="carousel__arrow carousel__arrow--prev" id="carouselPrev" aria-label="Previous slide">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
-        </button>
-        <button class="carousel__arrow carousel__arrow--next" id="carouselNext" aria-label="Next slide">
-          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M9 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg>
-        </button>
-
-        <div class="carousel__dots" id="carouselDots"></div>
+    <div class="container">
+      <div class="drag-gallery__bar" id="dragBar">
+        <div class="drag-gallery__thumb" id="dragThumb"></div>
       </div>
     </div>
   </section>
@@ -785,7 +782,7 @@
     </button>
   </div>
 
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=12"></script>
 </body>
 
 </html>
