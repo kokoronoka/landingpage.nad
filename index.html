@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=28" />
+  <link rel="stylesheet" href="styles.css?v=35" />
 </head>
 
 <body>
@@ -59,13 +59,17 @@
       <a href="#quiz" class="btn btn--gold">Take the Quiz</a>
     </div>
 
+    <video class="hero__video" autoplay muted loop playsinline aria-hidden="true">
+      <source src="assets/videos/hero-video.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__scrim" aria-hidden="true"></div>
     <div class="hero__blob" id="heroBlob" aria-hidden="true"></div>
     <div class="hero__glow" aria-hidden="true"></div>
 
     <div class="hero__content">
-      <p class="hero__eyebrow hero-anim hero-reveal" style="animation-delay:.1s">
+      <!-- <p class="hero__eyebrow hero-anim hero-reveal" style="animation-delay:.1s">
         <span class="dot"></span>Pharmaceutical&#8209;Grade Precision
-      </p>
+      </p> -->
 
       <h1 class="hero__title hero-anim hero-reveal" style="animation-delay:.25s">
         Restore Your Peak Energy &middot; Renew Life at the <span class="hl">Cellular Level</span>
@@ -107,16 +111,16 @@
         <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
             <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" fill="none" stroke="currentColor"
               stroke-width="1.6" stroke-linejoin="round" />
-          </svg>30 Years of Medical Expertise</li>
+          </svg>Pharmaceutical&#8209;grade Precision</li>
         <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
             <path d="M10 2h4v6l4 9a3 3 0 0 1-2.7 4H8.7A3 3 0 0 1 6 17l4-9V2z" fill="none" stroke="currentColor"
               stroke-width="1.6" stroke-linejoin="round" />
-          </svg> Physician-Led Wellness Care</li>
+          </svg> 99% PURITY</li>
         <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
             <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
             <path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
               stroke-linejoin="round" />
-          </svg>Personalised Treatment Plan
+          </svg>Cold&#8209;Chain Preserved
         </li>
       </ul>
 
@@ -124,14 +128,7 @@
         <div class="product__flow" aria-label="Cell to Mitochondria to Energy process">
           <div class="flow-stage flow-stage--cell">
             <div class="flow-icon">
-              <svg viewBox="0 0 48 48" width="42" height="42" aria-hidden="true">
-                <circle cx="24" cy="24" r="19" fill="none" stroke="currentColor" stroke-width="1.8" />
-                <circle cx="24" cy="24" r="8" fill="none" stroke="currentColor" stroke-width="1.8" />
-                <circle cx="14" cy="16" r="1.6" fill="currentColor" />
-                <circle cx="34" cy="15" r="1.6" fill="currentColor" />
-                <circle cx="36" cy="32" r="1.6" fill="currentColor" />
-                <circle cx="12" cy="33" r="1.6" fill="currentColor" />
-              </svg>
+              <img src="assets/images/Cell.png" alt="Cell" />
             </div>
             <span class="flow-label">Cell</span>
           </div>
@@ -140,13 +137,7 @@
 
           <div class="flow-stage flow-stage--mito">
             <div class="flow-icon">
-              <svg viewBox="0 0 48 48" width="46" height="30" aria-hidden="true">
-                <rect x="2" y="6" width="44" height="24" rx="12" fill="none" stroke="currentColor" stroke-width="1.8" />
-                <path d="M10 12c4 0 4 6 8 6s4-6 8-6 4 6 8 6 4-6 8-6" fill="none" stroke="currentColor"
-                  stroke-width="1.6" stroke-linecap="round" />
-                <path d="M10 24c4 0 4-6 8-6s4 6 8 6 4-6 8-6 4 6 8 6" fill="none" stroke="currentColor"
-                  stroke-width="1.6" stroke-linecap="round" />
-              </svg>
+              <img src="assets/images/Mitochondria.png" alt="Mitochondria" />
             </div>
             <span class="flow-label">Mitochondria</span>
           </div>
@@ -155,20 +146,15 @@
 
           <div class="flow-stage flow-stage--energy">
             <div class="flow-icon">
-              <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">
-                <path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="currentColor" />
-              </svg>
+              <img src="assets/images/Energy.png" alt="Energy" />
             </div>
             <span class="flow-label">Energy</span>
           </div>
         </div>
-        <span class="tag tag--dark">99% PURITY CERTIFIED</span>
-        <span class="tag tag--blue">COLD&#8209;CHAIN PRESERVED</span>
       </div>
 
       <div class="product__quote reveal">
         <p class="eyebrow-link">Why NAD+?</p>
-        <p> </p>
         <p>
           NAD+ (Nicotinamide Adenine Dinucleotide) is a vital coenzyme found in every cell of your body. It plays a
           crucial role in energy production, DNA repair, and healthy cell function.</p>
@@ -177,8 +163,6 @@
           repair.</p>
 
         <p>NAD+ Therapy aims to replenish these levels under medical supervision.</p>
-        <!-- <p>&ldquo;Formulated to exceed pharmaceutical purity benchmarks, engineering cellular uptake that is
-        measurably superior to standard NAD&#43; formulations.&rdquo; &mdash; Independent Purity Analysis, 2024</p> -->
       </div>
     </div>
   </section>
@@ -275,49 +259,81 @@
       <p class="section__eyebrow reveal">Biological Restoration</p>
       <h2 class="section__title reveal">The Zéll&#8209;V Standard of Vitality</h2>
 
-      <div class="benefits__grid">
-        <article class="bcard reveal">
-          <div class="bcard__img bcard__img--brain" aria-hidden="true"></div>
-          <div class="bcard__body">
-            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                <path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z"
-                  fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-              </svg></div>
-            <h3>Improve Mental Clarity</h3>
-            <p>Many individuals report feeling more alert and mentally focused after improving their overall cellular
-              health. NAD+ therapy aims to support brain energy metabolism, helping you stay focused during demanding
-              work and daily activities.
-            </p>
+      <div class="restoration-stack">
+        <div class="restoration-panel">
+          <div class="restoration-panel__inner">
+            <div class="restoration-panel__content">
+              <h3>Improve Mental Clarity</h3>
+              <p>Many individuals report feeling more alert and mentally focused after improving their overall
+                cellular health. NAD&#43; therapy aims to support brain energy metabolism, helping you stay focused
+                during demanding work and daily activities.</p>
+              <p class="restoration-panel__label">Benefits:</p>
+              <ul>
+                <li>Sharper focus and mental alertness</li>
+                <li>Support for healthy brain energy metabolism</li>
+                <li>Improved productivity during demanding tasks</li>
+              </ul>
+            </div>
+            <div class="restoration-panel__media">
+              <div class="bcard__img bcard__img--brain" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">
+                  <path d="M9 18h6M10 21h4M12 3a6 6 0 0 1 4 10.5c-.7.6-1 1.2-1 2H9c0-.8-.3-1.4-1-2A6 6 0 0 1 12 3z"
+                    fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
 
-        <article class="bcard reveal">
-          <div class="bcard__img bcard__img--dna" aria-hidden="true"></div>
-          <div class="bcard__body">
-            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                <path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor"
-                  stroke-width="1.6" stroke-linecap="round" />
-              </svg></div>
-            <h3>Support Healthy Ageing</h3>
-            <p>NAD+ is involved in many cellular processes associated with healthy ageing. Maintaining adequate NAD+
-              levels may support your body's natural ability to repair cells and promote long-term vitality as you age.
-            </p>
+        <div class="restoration-panel">
+          <div class="restoration-panel__inner">
+            <div class="restoration-panel__content">
+              <h3>Support Healthy Ageing</h3>
+              <p>NAD&#43; is involved in many cellular processes associated with healthy ageing. Maintaining adequate
+                NAD&#43; levels may support your body's natural ability to repair cells and promote long&#8209;term
+                vitality as you age.</p>
+              <p class="restoration-panel__label">Benefits:</p>
+              <ul>
+                <li>Supports natural cellular repair processes</li>
+                <li>Promotes long&#8209;term vitality</li>
+                <li>Involved in key ageing&#8209;related cellular pathways</li>
+              </ul>
+            </div>
+            <div class="restoration-panel__media">
+              <div class="bcard__img bcard__img--dna" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">
+                  <path d="M8 3c4 3 4 5 0 8s-4 7 0 10M16 3c-4 3-4 5 0 8s4 7 0 10" fill="none" stroke="currentColor"
+                    stroke-width="1.6" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
 
-        <article class="bcard reveal">
-          <div class="bcard__img bcard__img--iv" aria-hidden="true"></div>
-          <div class="bcard__body">
-            <div class="bcard__icon"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                <path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="none" stroke="currentColor" stroke-width="1.6"
-                  stroke-linejoin="round" />
-              </svg></div>
-            <h3>Reduce Fatigue</h3>
-            <p>When your cells produce energy more efficiently, your body may feel less physically and mentally drained.
-              NAD+ therapy is commonly explored by individuals looking to improve energy levels and reduce persistent
-              fatigue.</p>
+        <div class="restoration-panel">
+          <div class="restoration-panel__inner">
+            <div class="restoration-panel__content">
+              <h3>Reduce Fatigue</h3>
+              <p>When your cells produce energy more efficiently, your body may feel less physically and mentally
+                drained. NAD&#43; therapy is commonly explored by individuals looking to improve energy levels and
+                reduce persistent fatigue.</p>
+              <p class="restoration-panel__label">Benefits:</p>
+              <ul>
+                <li>More efficient cellular energy production</li>
+                <li>Less physical and mental drain</li>
+                <li>Support for consistent daily energy levels</li>
+              </ul>
+            </div>
+            <div class="restoration-panel__media">
+              <div class="bcard__img bcard__img--iv" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="34" height="34" aria-hidden="true">
+                  <path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="none" stroke="currentColor" stroke-width="1.6"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
       </div>
 
       <div class="additional-benefits reveal">
@@ -325,8 +341,8 @@
         <ul class="ab-list">
           <li>
             <span class="ab-check ab-check--blue">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
-                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M13 2 L4 14 h6 l-1 8 9-12 h-6 z" fill="none" stroke="currentColor" stroke-width="1.7"
                   stroke-linejoin="round" />
               </svg>
             </span>
@@ -334,8 +350,10 @@
           </li>
           <li>
             <span class="ab-check ab-check--green">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
-                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linejoin="round" />
+                <path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"
                   stroke-linejoin="round" />
               </svg>
             </span>
@@ -343,36 +361,37 @@
           </li>
           <li>
             <span class="ab-check ab-check--gold">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
-                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M12 20.5s-6.5-4-8.5-8.2C2.2 9.3 3.6 6.3 6.4 5.6c1.7-.4 3.4.3 4.4 1.8l1.2 1.7 1.2-1.7c1-1.5 2.7-2.2 4.4-1.8 2.8.7 4.2 3.7 2.9 6.7-2 4.2-8.5 8.2-8.5 8.2z"
+                  fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
               </svg>
             </span>
             Promote Overall Wellness
           </li>
           <li>
             <span class="ab-check ab-check--blue">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
-                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z" fill="none" stroke="currentColor"
+                  stroke-width="1.6" stroke-linejoin="round" />
               </svg>
             </span>
             Skin Rejuvenation
           </li>
           <li>
             <span class="ab-check ab-check--green">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
-                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <circle cx="18" cy="5" r="1.8" fill="currentColor" />
+                <path d="M9 20l2.5-7 3-2-1-4-3 1-1.5 3.5M13.5 11l3 1.5 3-1.5M9 20l-3 1M11.5 13l-4 1.5"
+                  fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </span>
             Support Active Living
           </li>
           <li>
             <span class="ab-check ab-check--gold">
-              <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true">
-                <path d="M5 13l4 4L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
-                  stroke-linejoin="round" />
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path d="M12 22c4 0 6.5-2.7 6.5-6.2 0-2.7-1.5-4.4-2.6-6-.3.9-.9 1.9-1.7 2.4.3-2.7-.7-5.6-3-7.2.2 1.7-.3 3.2-1.5 4.4C7.8 10.4 6.5 12 6.5 14.8 6.5 18.5 8.5 22 12 22z"
+                  fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
               </svg>
             </span>
             Obesity &amp; Metabolic Support
@@ -392,54 +411,60 @@
         Engineered for maximum bioavailability and safety at every dose.
       </p>
 
-      <div class="quality__cards">
-        <article class="quality-card reveal">
-          <span class="qicon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path d="M9 4h6a1 1 0 0 1 1 1v1H8V5a1 1 0 0 1 1-1z" fill="none" stroke="currentColor" stroke-width="1.6"
-                stroke-linejoin="round" />
-              <rect x="5" y="4" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" />
-              <path d="M8.5 11h7M8.5 14.5h7M8.5 18h4.5" stroke="currentColor" stroke-width="1.5"
-                stroke-linecap="round" />
-            </svg></span>
+    </div>
+
+    <div class="approach-gallery reveal" id="approachGallery">
+      <!-- Replace each .carousel__ph below with: <img class="approach-block__img" src="assets/images/approach-1.jpg" alt="..." /> -->
+      <div class="approach-block">
+        <!-- <div class="carousel__ph">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+          <span>Image 1 &mdash; replace me</span>
+        </div> -->
+        <img class="approach-block__img" src="assets/images/MedicalAssessment.png" alt="..." />
+        <div class="approach-block__overlay">
+          <span class="approach-block__num">01</span>
           <h3>Medical Assessment Before Treatment</h3>
-          <p>Every protocol begins with a thorough health review to confirm NAD&#43; therapy is a safe, suitable fit for
-            you.</p>
-        </article>
+          <p>Every protocol begins with a thorough health review to confirm NAD&#43; therapy is a safe, suitable fit for you.</p>
+        </div>
+      </div>
 
-        <article class="quality-card reveal">
-          <span class="qicon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6" />
-              <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.6" />
-              <circle cx="12" cy="12" r="1.4" fill="currentColor" />
-            </svg></span>
+      <div class="approach-block">
+        <!-- <div class="carousel__ph">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+          <span>Image 2 &mdash; replace me</span>
+        </div> -->
+        <img class="approach-block__img" src="assets/images/PersonalisedWellness.png" alt="..." />
+        <div class="approach-block__overlay">
+          <span class="approach-block__num">02</span>
           <h3>Personalised Wellness Planning</h3>
-          <p>Your dosage, frequency, and protocol are tailored to your goals &mdash; not a
-            one&#8209;size&#8209;fits&#8209;all plan.</p>
-        </article>
+          <p>Your dosage, frequency, and protocol are tailored to your goals &mdash; not a one&#8209;size&#8209;fits&#8209;all plan.</p>
+        </div>
+      </div>
 
-        <article class="quality-card reveal">
-          <span class="qicon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <path d="M4 19V9M10 19V5M16 19v-7M22 19H2" fill="none" stroke="currentColor" stroke-width="1.6"
-                stroke-linecap="round" stroke-linejoin="round" />
-              <path d="M4 9l6-4 6 5 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
-                stroke-linejoin="round" />
-            </svg></span>
+      <div class="approach-block">
+        <!-- <div class="carousel__ph">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+          <span>Image 3 &mdash; replace me</span>
+        </div> -->
+        <img class="approach-block__img" src="assets/images/OngoingFollow‑up.png" alt="..." />
+        <div class="approach-block__overlay">
+          <span class="approach-block__num">03</span>
           <h3>Ongoing Follow&#8209;up &amp; Progress Monitoring</h3>
           <p>We track your response over time and refine your protocol as your energy and biomarkers evolve.</p>
-        </article>
+        </div>
+      </div>
 
-        <article class="quality-card reveal">
-          <span class="qicon"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
-              <circle cx="9" cy="8" r="3.2" fill="none" stroke="currentColor" stroke-width="1.6" />
-              <path d="M3.5 20c.8-3.5 3-5.3 5.5-5.3s4.7 1.8 5.5 5.3" fill="none" stroke="currentColor"
-                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="17" cy="9" r="2.4" fill="none" stroke="currentColor" stroke-width="1.6" />
-              <path d="M15.3 20c.5-2.6 1.9-4.1 3.8-4.3" fill="none" stroke="currentColor" stroke-width="1.6"
-                stroke-linecap="round" />
-            </svg></span>
+      <div class="approach-block">
+        <!-- <div class="carousel__ph">
+          <svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.6" /><circle cx="8.5" cy="9.5" r="1.6" fill="currentColor" /><path d="M21 16l-5.5-5.5a1.5 1.5 0 0 0-2.1 0L4 19" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+          <span>Image 4 &mdash; replace me</span>
+        </div> -->
+        <img class="approach-block__img" src="assets/images/ExperiencedTeam.png" alt="..." />
+        <div class="approach-block__overlay">
+          <span class="approach-block__num">04</span>
           <h3>Experienced Medical Team</h3>
           <p>Board&#8209;certified physicians and clinicians oversee every session, from consultation to aftercare.</p>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -782,7 +807,7 @@
     </button>
   </div>
 
-  <script src="script.js?v=12"></script>
+  <script src="script.js?v=14"></script>
 </body>
 
 </html>
